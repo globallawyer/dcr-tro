@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稻草人TRO | 跨境电商TRO应诉与知识产权保护专家</title>
+    <meta name="description" content="稻草人TRO团队由中美双证律师张兆新创建，专注跨境电商TRO应诉、知识产权保护、冻结资金解冻，为中国跨境卖家提供专业法律服务。">
+    <meta name="keywords" content="TRO,临时限制令,跨境电商,知识产权,冻结资金,亚马逊,速卖通,eBay,张兆新,稻草人">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --primary-light: #2a5a8c;
+            --accent: #c9a44a;
+            --accent-light: #e8c96a;
+            --dark: #0d1b2a;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+            --white: #ffffff;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-800);
+            font-size: 15px;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(201, 164, 74, 0.4);
+            color: var(--white) !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 72px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(201, 164, 74, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%),
+                radial-gradient(circle at 60% 80%, rgba(201, 164, 74, 0.08) 0%, transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(201, 164, 74, 0.3);
+            border-radius: 50%;
+            animation: float-particle linear infinite;
+        }
+
+        @keyframes float-particle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 164, 74, 0.15);
+            border: 1px solid rgba(201, 164, 74, 0.3);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            color: var(--accent-light);
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-badge i {
+            font-size: 12px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 36px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 164, 74, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--accent-light);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* ===== SECTIONS COMMON ===== */
+        .section {
+            padding: 100px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(26, 58, 92, 0.08);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 17px;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== ALERT TICKER ===== */
+        .alert-ticker {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 14px 0;
+            overflow: hidden;
+        }
+
+        .ticker-content {
+            display: flex;
+            align-items: center;
+            animation: ticker 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            padding: 0 40px;
+        }
+
+        .ticker-item .badge {
+            background: rgba(201, 164, 74, 0.2);
+            color: var(--accent-light);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .ticker-item .alert-tag {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            background: var(--gray-100);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(201, 164, 74, 0.15);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .service-tags span {
+            background: var(--gray-100);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* ===== PROCESS ===== */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--primary), var(--accent));
+            opacity: 0.3;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--white);
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 20px rgba(26, 58, 92, 0.3);
+        }
+
+        .step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        /* ===== TROTRACKER ===== */
+        .trotracker {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trotracker::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 164, 74, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .trotracker .section-tag {
+            background: rgba(201, 164, 74, 0.15);
+            color: var(--accent-light);
+        }
+
+        .trotracker .section-header h2 {
+            color: var(--white);
+        }
+
+        .trotracker .section-header p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .tracker-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .tracker-features {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .tracker-feature {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .tracker-feature-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: rgba(201, 164, 74, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-light);
+            font-size: 20px;
+        }
+
+        .tracker-feature h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .tracker-feature p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .tracker-mockup {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .mockup-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mockup-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .mockup-dot:nth-child(1) { background: #ff5f57; }
+        .mockup-dot:nth-child(2) { background: #febc2e; }
+        .mockup-dot:nth-child(3) { background: #28c840; }
+
+        .mockup-url {
+            margin-left: 12px;
+            background: rgba(255,255,255,0.08);
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            flex: 1;
+        }
+
+        .mockup-search {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .mockup-input {
+            flex: 1;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 10px 16px;
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+        }
+
+        .mockup-btn {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .mockup-results {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .mockup-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .mockup-case {
+            color: var(--accent-light);
+            font-weight: 600;
+        }
+
+        .mockup-status {
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .status-active { background: rgba(231, 76, 60, 0.2); color: #e74c3c; }
+        .status-settled { background: rgba(40, 200, 64, 0.2); color: #28c840; }
+        .status-pending { background: rgba(254, 188, 46, 0.2); color: #febc2e; }
+
+        .tracker-cta {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .btn-tracker {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .btn-tracker:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(201, 164, 74, 0.4);
+        }
+
+        /* ===== ABOUT / LAWYER ===== */
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .lawyer-card {
+            background: linear-gradient(135deg, var(--gray-100), var(--white));
+            border-radius: 20px;
+            padding: 40px 32px;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            position: sticky;
+            top: 96px;
+        }
+
+        .lawyer-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: var(--white);
+            box-shadow: 0 8px 32px rgba(26, 58, 92, 0.3);
+        }
+
+        .lawyer-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .lawyer-card .title {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .lawyer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .lawyer-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        .lawyer-info-item i {
+            color: var(--primary);
+            width: 18px;
+            text-align: center;
+        }
+
+        .about-details {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .detail-block {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: 32px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .detail-block h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-block h4 i {
+            color: var(--accent);
+        }
+
+        .detail-block ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .detail-block ul li {
+            font-size: 15px;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-block ul li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .detail-block p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        /* ===== CASES / SUCCESS ===== */
+        .cases {
+            background: var(--gray-100);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .case-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(201, 164, 74, 0.2);
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            padding: 24px;
+            color: var(--white);
+        }
+
+        .case-type {
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(201, 164, 74, 0.2);
+            color: var(--accent-light);
+            padding: 3px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .case-header h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .case-body {
+            padding: 24px;
+        }
+
+        .case-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .case-meta-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .case-meta-item .label {
+            color: var(--gray-600);
+        }
+
+        .case-meta-item .value {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .case-result {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        /* ===== ADVANTAGES ===== */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 40px 24px;
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .advantage-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, rgba(26, 58, 92, 0.08), rgba(201, 164, 74, 0.08));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 16px;
+        }
+
+        .advantage-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .advantage-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            background: var(--gray-100);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .faq-item.active {
+            border-color: var(--accent);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--accent);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .contact-item-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 20px;
+        }
+
+        .contact-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .contact-item p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        .contact-form {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(201, 164, 74, 0.1);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 58, 92, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        /* ===== WECHAT QR FLOAT ===== */
+        .wechat-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .float-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+        }
+
+        .float-wechat {
+            background: #07c160;
+        }
+
+        .float-top {
+            background: var(--primary);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .services-grid,
+            .cases-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .advantages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .tracker-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lawyer-card {
+                position: static;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                gap: 16px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-desc {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .services-grid,
+            .cases-grid,
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">D</div>
+                <div class="logo-text">稻草人<span>TRO</span></div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">服务范围</a></li>
+                <li><a href="#process">服务流程</a></li>
+                <li><a href="#trotracker">TRO查询</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#cases">成功案例</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact" class="nav-cta">立即咨询</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ALERT TICKER -->
+    <div class="alert-ticker" style="margin-top: 72px;">
+        <div class="ticker-content" id="tickerContent">
+            <div class="ticker-item">
+                <span class="alert-tag">NEW</span>
+                <span>Case 1:26-cv-02891 — Skechers品牌TRO诉讼</span>
+                <span class="badge">2026-04-10</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">预警</span>
+                <span>Case 1:26-cv-02756 — GBC律所新发起批量TRO</span>
+                <span class="badge">2026-04-08</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">胜诉</span>
+                <span>客户Amazon店铺冻结资金$38,000成功解冻</span>
+                <span class="badge">2026-04-06</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">预警</span>
+                <span>Case 1:26-cv-02612 — Keith律所新TRO针对多平台卖家</span>
+                <span class="badge">2026-04-05</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">NEW</span>
+                <span>TROTracker平台已收录2026年最新案件数据</span>
+                <span class="badge">实时更新</span>
+            </div>
+            <!-- Duplicate for seamless scrolling -->
+            <div class="ticker-item">
+                <span class="alert-tag">NEW</span>
+                <span>Case 1:26-cv-02891 — Skechers品牌TRO诉讼</span>
+                <span class="badge">2026-04-10</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">预警</span>
+                <span>Case 1:26-cv-02756 — GBC律所新发起批量TRO</span>
+                <span class="badge">2026-04-08</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">胜诉</span>
+                <span>客户Amazon店铺冻结资金$38,000成功解冻</span>
+                <span class="badge">2026-04-06</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">预警</span>
+                <span>Case 1:26-cv-02612 — Keith律所新TRO针对多平台卖家</span>
+                <span class="badge">2026-04-05</span>
+            </div>
+            <div class="ticker-item">
+                <span class="alert-tag">NEW</span>
+                <span>TROTracker平台已收录2026年最新案件数据</span>
+                <span class="badge">实时更新</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-halved"></i>
+                    中美双证律师团队 · 专注TRO应诉
+                </div>
+                <h1>
+                    跨境卖家的<br>
+                    <span class="highlight">TRO应诉盾牌</span>
+                </h1>
+                <p class="hero-desc">
+                    稻草人TRO团队由中美双证律师张兆新创建，拥有多个美国联邦法院出庭资格。
+                    我们为跨境电商卖家提供TRO应诉、冻结资金解冻、知识产权保护一站式法律服务。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-comment-dots"></i> 免费咨询
+                    </a>
+                    <a href="https://www.trotracker.com" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-search"></i> 查询TRO案件
+                    </a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="counter1">500+</div>
+                    <div class="stat-label">成功应诉案件</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">资金解冻成功率</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$2000万+</div>
+                    <div class="stat-label">累计挽回资金</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">72h</div>
+                    <div class="stat-label">平均响应时间</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-briefcase"></i> 专业服务</div>
+                <h2>全方位跨境法律服务</h2>
+                <p>从TRO应诉到知识产权保护，一站式解决跨境卖家法律难题</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>TRO应诉与和解</h3>
+                    <p>收到美国法院TRO临时限制令？我们第一时间介入，代理应诉、谈判和解，最大限度保护您的资金和账号安全。</p>
+                    <div class="service-tags">
+                        <span>紧急应诉</span>
+                        <span>和解谈判</span>
+                        <span>资金解冻</span>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-snowflake"></i></div>
+                    <h3>冻结资金解冻</h3>
+                    <p>PayPal、Stripe、平台资金被冻结？我们通过专业法律程序，快速与原告律所沟通，推动资金尽快解冻。</p>
+                    <div class="service-tags">
+                        <span>PayPal</span>
+                        <span>Stripe</span>
+                        <span>平台资金</span>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>知识产权保护</h3>
+                    <p>美国商标注册、专利申请、版权登记，从源头建立品牌护城河，防范侵权风险。</p>
+                    <div class="service-tags">
+                        <span>商标注册</span>
+                        <span>专利申请</span>
+                        <span>版权保护</span>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-store"></i></div>
+                    <h3>平台申诉 (POA)</h3>
+                    <p>Amazon、eBay、速卖通等平台账号被封？我们帮您撰写专业申诉计划（Plan of Action），恢复销售权限。</p>
+                    <div class="service-tags">
+                        <span>Amazon</span>
+                        <span>eBay</span>
+                        <span>速卖通</span>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>跨境纠纷处理</h3>
+                    <p>中美跨境商业纠纷、合同争议、债务追偿，提供从协商到诉讼的全流程法律支持。</p>
+                    <div class="service-tags">
+                        <span>商业纠纷</span>
+                        <span>合同争议</span>
+                        <span>债务追偿</span>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-bell"></i></div>
+                    <h3>TRO预警监控</h3>
+                    <p>通过TROTracker平台实时监控最新TRO案件，提前预警侵权风险，帮助卖家防患于未然。</p>
+                    <div class="service-tags">
+                        <span>实时预警</span>
+                        <span>案件监控</span>
+                        <span>风险评估</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-list-ol"></i> 服务流程</div>
+                <h2>四步快速响应</h2>
+                <p>从接到通知到资金解冻，专业高效的全流程服务</p>
+            </div>
+            <div class="process-steps">
+                <div class="step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3>紧急咨询</h3>
+                    <p>收到TRO通知后，立即联系我们进行免费初步评估，分析案件情况</p>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3>案件分析</h3>
+                    <p>律师团队深入研究案件细节，制定最优应诉方案和和解策略</p>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3>专业应诉</h3>
+                    <p>在美国联邦法院代理出庭应诉，与原告律所进行和解谈判</p>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <h3>资金解冻</h3>
+                    <p>达成和解协议后，推动冻结资金尽快解冻，恢复正常经营</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TROTRACKER -->
+    <section class="section trotracker" id="trotracker">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-database"></i> 自研平台</div>
+                <h2>TROTracker 案件查询平台</h2>
+                <p>稻草人团队自主研发的TRO案件追踪系统，实时掌握最新诉讼动态</p>
+            </div>
+            <div class="tracker-content">
+                <div class="tracker-features animate-on-scroll">
+                    <div class="tracker-feature">
+                        <div class="tracker-feature-icon"><i class="fas fa-magnifying-glass"></i></div>
+                        <div>
+                            <h4>实时案件查询</h4>
+                            <p>输入店铺名称、案件编号或品牌名，即刻查询是否涉及TRO诉讼</p>
+                        </div>
+                    </div>
+                    <div class="tracker-feature">
+                        <div class="tracker-feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h4>诉讼趋势分析</h4>
+                            <p>追踪各大原告律所、品牌方的诉讼频率与趋势，数据驱动决策</p>
+                        </div>
+                    </div>
+                    <div class="tracker-feature">
+                        <div class="tracker-feature-icon"><i class="fas fa-bell"></i></div>
+                        <div>
+                            <h4>侵权预警推送</h4>
+                            <p>新TRO案件第一时间推送提醒，帮助卖家及时下架侵权产品</p>
+                        </div>
+                    </div>
+                    <div class="tracker-feature">
+                        <div class="tracker-feature-icon"><i class="fas fa-file-lines"></i></div>
+                        <div>
+                            <h4>律所/品牌档案</h4>
+                            <p>GBC、Keith、Greer Burns Crain等高频律所的完整诉讼档案与应对建议</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tracker-mockup animate-on-scroll">
+                    <div class="mockup-header">
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-dot"></div>
+                        <div class="mockup-url">www.trotracker.com</div>
+                    </div>
+                    <div class="mockup-search">
+                        <div class="mockup-input">搜索案件编号 / 品牌 / 店铺名...</div>
+                        <div class="mockup-btn">查询</div>
+                    </div>
+                    <div class="mockup-results">
+                        <div class="mockup-row">
+                            <span class="mockup-case">1:26-cv-02891</span>
+                            <span style="color: rgba(255,255,255,0.5);">Skechers v. Doe</span>
+                            <span class="mockup-status status-active">进行中</span>
+                        </div>
+                        <div class="mockup-row">
+                            <span class="mockup-case">1:26-cv-02756</span>
+                            <span style="color: rgba(255,255,255,0.5);">Nike v. Sellers</span>
+                            <span class="mockup-status status-pending">待和解</span>
+                        </div>
+                        <div class="mockup-row">
+                            <span class="mockup-case">1:26-cv-02103</span>
+                            <span style="color: rgba(255,255,255,0.5);">UGG v. Doe</span>
+                            <span class="mockup-status status-settled">已和解</span>
+                        </div>
+                        <div class="mockup-row">
+                            <span class="mockup-case">1:26-cv-01887</span>
+                            <span style="color: rgba(255,255,255,0.5);">Gucci v. Stores</span>
+                            <span class="mockup-status status-settled">已和解</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tracker-cta animate-on-scroll">
+                <a href="https://www.trotracker.com" target="_blank" class="btn-tracker">
+                    <i class="fas fa-external-link-alt"></i> 前往 TROTracker 查询案件
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-user-tie"></i> 团队介绍</div>
+                <h2>中美双证律师领衔</h2>
+                <p>专业、高效、值得信赖的跨境法律团队</p>
+            </div>
+            <div class="about-grid">
+                <div class="lawyer-card animate-on-scroll">
+                    <div class="lawyer-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>张兆新</h3>
+                    <div class="title">稻草人TRO团队创始人</div>
+                    <div class="lawyer-info">
+                        <div class="lawyer-info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>北京大学硕士 · 哈尔滨工业大学学士</span>
+                        </div>
+                        <div class="lawyer-info-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>中国执业律师 · 美国加州执业律师</span>
+                        </div>
+                        <div class="lawyer-info-item">
+                            <i class="fas fa-building-columns"></i>
+                            <span>天册律师事务所合伙人</span>
+                        </div>
+                        <div class="lawyer-info-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>CFA持证人</span>
+                        </div>
+                        <div class="lawyer-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>zhangzhaoxin@tclawfirm.com</span>
+                        </div>
+                        <div class="lawyer-info-item">
+                            <i class="fab fa-weixin"></i>
+                            <span>微信: mylearnedfriend</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <div class="detail-block animate-on-scroll">
+                        <h4><i class="fas fa-landmark"></i> 联邦法院出庭资格</h4>
+                        <ul>
+                            <li>美国加利福尼亚州北区联邦地区法院</li>
+                            <li>美国加利福尼亚州中区联邦地区法院</li>
+                            <li>美国伊利诺伊州北区联邦地区法院</li>
+                            <li>美国纽约州南区联邦地区法院</li>
+                        </ul>
+                    </div>
+                    <div class="detail-block animate-on-scroll">
+                        <h4><i class="fas fa-award"></i> 专业荣誉与职务</h4>
+                        <ul>
+                            <li>深圳市涉外律师新锐人才</li>
+                            <li>深跨协国际贸易冲突委员会主任</li>
+                            <li>聚焦跨境争议、TRO诉讼、涉外知识产权领域</li>
+                        </ul>
+                    </div>
+                    <div class="detail-block animate-on-scroll">
+                        <h4><i class="fas fa-briefcase"></i> 执业经历</h4>
+                        <p>张兆新律师曾先后在联想集团、海航资本、盈科律师事务所等知名机构任职，积累了丰富的跨境商业法律实务经验。现任天册律师事务所深圳办公室合伙人，专注于为跨境电商卖家提供TRO应诉、知识产权保护及跨境争议解决服务。</p>
+                    </div>
+                    <div class="detail-block animate-on-scroll">
+                        <h4><i class="fas fa-users"></i> 稻草人团队</h4>
+                        <p>稻草人TRO团队是一支由张兆新律师领衔的专业跨境法律服务团队，团队成员包括中美执业律师、知识产权专家、跨境电商资深顾问。团队秉承"专业、高效、负责"的服务理念，已成功处理数百起TRO应诉案件，累计为跨境卖家挽回数千万美元冻结资金。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="section cases" id="cases">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-trophy"></i> 成功案例</div>
+                <h2>实战成果说话</h2>
+                <p>每一个数字背后，都是卖家的信任与我们的专业</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-card animate-on-scroll">
+                    <div class="case-header">
+                        <div class="case-type">TRO和解</div>
+                        <h3>知名运动品牌侵权案</h3>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <div class="case-meta-item">
+                                <span class="label">冻结金额</span>
+                                <span class="value">$85,000</span>
+                            </div>
+                            <div class="case-meta-item">
+                                <span class="label">原告律所</span>
+                                <span class="value">GBC</span>
+                            </div>
+                            <div class="case-meta-item">
+                                <span class="label">处理周期</span>
+                                <span class="value">21天</span>
+                            </div>
+                        </div>
+                        <div class="case-result">
+                            <i class="fas fa-check-circle"></i> 成功解冻 $72,000 (85%)
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card animate-on-scroll">
+                    <div class="case-header">
+                        <div class="case-type">资金解冻</div>
+                        <h3>Amazon多店铺冻结案</h3>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <div class="case-meta-item">
+                                <span class="label">冻结金额</span>
+                                <span class="value">$120,000</span>
+                            </div>
+                            <div class="case-meta-item">
+                                <span class="label">涉及平台</span>
+                                <span class="value">Amazon / PayPal</span>
+                            </div>
+                            <div class="case-meta-item">
+                                <span class="label">处理周期</span>
+                                <span class="value">14天</span>
+                            </div>
+                        </div>
+                        <div class="case-result">
+                            <i class="fas fa-check-circle"></i> 全额解冻 $120,000
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card animate-on-scroll">
+                    <div class="case-header">
+                        <div class="case-type">平台申诉</div>
+                        <h3>eBay账号恢复案</h3>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-meta">
+                            <div class="case-meta-item">
+                                <span class="label">账号状态</span>
+                                <span class="value">永久封禁</span>
+                            </div>
+                            <div class="case-meta-item">
+                                <span class="label">年销售额</span>
+                                <span class="value">$500,000+</span>
+                            </div>
+                            <div class="case-meta-item">
+                                <span class="label">处理周期</span>
+                                <span class="value">30天</span>
+                            </div>
+                        </div>
+                        <div class="case-result">
+                            <i class="fas fa-check-circle"></i> 账号恢复 + 资金释放
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="section" id="advantages">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-star"></i> 核心优势</div>
+                <h2>为什么选择稻草人</h2>
+                <p>专业实力与贴心服务，让您的跨境之路更安心</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">⚖️</div>
+                    <h3>中美双证律师</h3>
+                    <p>中国及美国加州双重执业资格，无缝衔接中美法律体系</p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">🏛️</div>
+                    <h3>联邦法院出庭</h3>
+                    <p>具备多个美国联邦地区法院出庭资格，直接代理应诉</p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">🔍</div>
+                    <h3>自研查询平台</h3>
+                    <p>TROTracker平台实时追踪案件，数据驱动精准应对</p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon">⏱️</div>
+                    <h3>极速响应</h3>
+                    <p>72小时内完成案件评估，紧急案件当天响应处理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-circle-question"></i> 常见问题</div>
+                <h2>FAQ</h2>
+                <p>关于TRO应诉，您可能想了解的问题</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>什么是TRO？收到TRO后该怎么办？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            TRO（Temporary Restraining Order）即临时限制令，是美国法院在知识产权侵权案件中常用的一种紧急救济措施。品牌方或权利人通过美国律所向联邦法院申请TRO，法院可以在不通知被告的情况下冻结其PayPal、Stripe、Amazon等平台的资金和账号。收到TRO后，请不要恐慌，立即联系专业律师评估案件，制定应诉或和解方案。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>资金被冻结后还能解冻吗？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            可以。绝大多数TRO案件都可以通过和解方式解决。我们团队通过与原告律所谈判，达成和解协议后，冻结资金通常可以在一定比例内解冻返还。根据我们的经验，资金解冻成功率高达95%以上，平均可以挽回70%-100%的冻结金额。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>TRO应诉需要多长时间？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            TRO案件的处理周期因案件复杂程度而异。简单的和解案件通常可以在2-4周内完成；较复杂的案件可能需要1-3个月。我们会在接案后72小时内完成初步评估，并在整个过程中保持与客户的密切沟通。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>如何预防TRO？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            预防TRO的关键是做好知识产权合规：1）销售前进行商标、专利检索，避免使用他人知识产权；2）注册自有品牌商标，建立品牌护城河；3）关注TROTracker平台的预警信息，了解最新被诉品牌和律所动态；4）产品图片、描述避免使用他人品牌元素。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>你们和其他TRO服务团队有什么不同？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            稻草人TRO团队的核心优势在于：1）创始人张兆新律师是中国及美国双证执业律师，具备多个联邦法院出庭资格，可以直接在美国法院代理应诉；2）团队自主研发了TROTracker案件追踪平台，拥有行业领先的数据分析能力；3）我们不是中介，而是由持证律师直接提供法律服务，全程对客户负责。
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>服务费用如何收取？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            我们提供免费的初步案件评估。正式委托后，根据案件类型和复杂程度制定收费方案。TRO和解案件通常采用固定服务费+成功解冻奖励的模式，确保我们与客户的利益一致。具体费用请联系我们获取详细报价。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag"><i class="fas fa-envelope"></i> 联系我们</div>
+                <h2>立即获取专业帮助</h2>
+                <p>收到TRO？别慌，联系我们获取免费初步评估</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fab fa-weixin"></i></div>
+                        <div>
+                            <h4>微信咨询</h4>
+                            <p>添加微信: <strong>mylearnedfriend</strong></p>
+                            <p style="font-size: 12px; color: var(--gray-600);">工作时间实时响应，紧急案件7×24小时</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>邮件联系</h4>
+                            <p><a href="mailto:zhangzhaoxin@tclawfirm.com">zhangzhaoxin@tclawfirm.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>电话咨询</h4>
+                            <p><a href="tel:+86-755-83739000">+86-755-83739000</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <h4>办公地址</h4>
+                            <p>深圳市南山区科发路222号<br>康泰创新广场34楼<br>天册律师事务所深圳办公室</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-globe"></i></div>
+                        <div>
+                            <h4>在线平台</h4>
+                            <p>
+                                <a href="https://www.trotracker.com" target="_blank">TROTracker 案件查询</a><br>
+                                <a href="https://globallawyer.github.io/zhaoxin/" target="_blank">张兆新律师个人主页</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>您的姓名 *</label>
+                                <input type="text" placeholder="请输入姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <label>联系方式 *</label>
+                                <input type="text" placeholder="手机号 / 微信号 / 邮箱" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>咨询类型</label>
+                            <select>
+                                <option value="">请选择咨询类型</option>
+                                <option value="tro">TRO应诉 / 资金冻结</option>
+                                <option value="appeal">平台申诉 (Amazon/eBay等)</option>
+                                <option value="ip">知识产权注册 / 保护</option>
+                                <option value="dispute">跨境纠纷 / 合同争议</option>
+                                <option value="other">其他法律咨询</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>案件描述</label>
+                            <textarea placeholder="请简要描述您的情况，如：收到TRO通知、资金被冻结金额、涉及平台等..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> 提交咨询（免费初评）
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">D</div>
+                        <div class="logo-text">稻草人<span>TRO</span></div>
+                    </a>
+                    <p>稻草人TRO团队由中美双证律师张兆新创建，专注跨境电商TRO应诉与知识产权保护，致力于成为中国跨境卖家最信赖的法律服务伙伴。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>服务范围</h4>
+                    <ul>
+                        <li><a href="#services">TRO应诉和解</a></li>
+                        <li><a href="#services">冻结资金解冻</a></li>
+                        <li><a href="#services">知识产权保护</a></li>
+                        <li><a href="#services">平台申诉 (POA)</a></li>
+                        <li><a href="#services">跨境纠纷处理</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="https://www.trotracker.com" target="_blank">TROTracker 查询</a></li>
+                        <li><a href="https://globallawyer.github.io/zhaoxin/" target="_blank">律师个人主页</a></li>
+                        <li><a href="#about">关于团队</a></li>
+                        <li><a href="#cases">成功案例</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="mailto:zhangzhaoxin@tclawfirm.com"><i class="fas fa-envelope"></i> 邮件联系</a></li>
+                        <li><a href="tel:+86-755-83739000"><i class="fas fa-phone"></i> +86-755-83739000</a></li>
+                        <li><a href="#contact"><i class="fab fa-weixin"></i> mylearnedfriend</a></li>
+                        <li><a href="#contact"><i class="fas fa-location-dot"></i> 深圳南山科发路222号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024-2026 稻草人TRO团队 | 天册律师事务所</span>
+                <div class="footer-links">
+                    <a href="https://globallawyer.github.io/zhaoxin/" target="_blank">律师主页</a>
+                    <a href="https://www.trotracker.com" target="_blank">TROTracker</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <div class="wechat-float">
+        <button class="float-btn float-wechat" onclick="alert('微信号: mylearnedfriend\n添加微信获取免费咨询')" title="微信咨询">
+            <i class="fab fa-weixin"></i>
+        </button>
+        <button class="float-btn float-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="返回顶部">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ===== MOBILE NAV =====
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            mobileToggle.innerHTML = navLinks.classList.contains('open')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // ===== PARTICLES =====
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.width = particle.style.height = (Math.random() * 4 + 2) + 'px';
+            particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+            particle.style.animationDelay = (Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // ===== SCROLL ANIMATIONS =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // ===== FAQ =====
+        function toggleFAQ(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const isActive = item.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            // Open clicked if it was closed
+            if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+
+        // ===== FORM SUBMIT =====
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('感谢您的咨询！我们会在24小时内与您联系。\n\n如需紧急帮助，请直接添加微信: mylearnedfriend');
+            e.target.reset();
+        }
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
