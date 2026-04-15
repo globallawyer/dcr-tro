@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRO稻草人 | 为TRO而生 · 跨境电商TRO应诉专家</title>
     <meta name="description" content="TRO稻草人团队由中美双证律师张兆新创建，数十位中外律师团队，专注跨境电商TRO应诉、冻结资金解冻、知识产权保护，没有中间商。">
-    <meta name="keywords" content="TRO,临时限制令,跨境电商,知识产权,冻结资金,亚马逊,速卖通,eBay,张兆新,稻草人,TRO应诉,GBC,Keith,冻结资金解冻">
+    <meta name="keywords" content="TRO,临时限制令,跨境电商,知识产权,冻结资金,亚马逊,速卖通,eBay,张兆新,稻草人,TRO应诉,GBC,Keith,冻结资金解冻,美国律师,涉外律师,涉外出海,亚马逊侵权,TRO侵权和解,TRO组团和解,亚马逊侵权申诉,TRO和解,TRO侵权,GBC律所,Keith律所,商标注册,专利注册,版权注册">
+    <link rel="canonical" href="https://trolawyer.site/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -711,10 +712,14 @@
         }
         .footer-links { display: flex; gap: var(--sp-4); }
         .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: var(--text-sm); }
-        .friend-links { border-top: 1px solid rgba(255,255,255,0.06); margin-top: var(--sp-4); padding-top: var(--sp-3); }
-        .friend-links span { color: rgba(255,255,255,0.3); font-size: var(--text-xs); margin-right: var(--sp-2); }
-        .friend-links a { color: rgba(255,255,255,0.3); text-decoration: none; font-size: var(--text-xs); margin-right: var(--sp-3); }
+        .friend-links { border-top: 1px solid rgba(255,255,255,0.06); margin-top: var(--sp-4); padding-top: var(--sp-3); display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-1) 0; }
+        .friend-links span { color: rgba(255,255,255,0.35); font-size: var(--text-xs); margin-right: var(--sp-2); }
+        .friend-links a { color: rgba(255,255,255,0.3); text-decoration: none; font-size: var(--text-xs); margin-right: var(--sp-3); transition: var(--trans); position: relative; }
         .friend-links a:hover { color: var(--accent-light); }
+        .friend-links a::after { content: '|'; margin-left: var(--sp-3); color: rgba(255,255,255,0.1); }
+        .friend-links a:last-child::after { content: ''; }
+        .seo-keywords { border-top: 1px solid rgba(255,255,255,0.04); margin-top: var(--sp-3); padding-top: var(--sp-3); display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+        .seo-keywords span { color: rgba(255,255,255,0.15); font-size: 10px; padding: 2px 8px; border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-full); line-height: 1.6; }
 
         /* ===== FLOATING + STICKY MOBILE ===== */
         .float-btns { position: fixed; right: var(--sp-4); bottom: 80px; z-index: var(--z-fixed); display: flex; flex-direction: column; gap: var(--sp-2); }
@@ -1567,12 +1572,22 @@
         </div>
         <div class="friend-links">
             <span>友情链接：</span>
-            <a href="https://www.trotracker.com" target="_blank">TROTracker</a>
-            <a href="https://www.uspto.gov" target="_blank">USPTO</a>
-            <a href="https://euipo.europa.eu" target="_blank">EUIPO</a>
-            <a href="https://www.wipo.int" target="_blank">WIPO</a>
-            <a href="https://www.jpo.go.jp" target="_blank">JPO</a>
-            <a href="https://www.cnipa.gov.cn" target="_blank">CNIPA</a>
+            <a href="https://gbc.law/" target="_blank" rel="noopener">GBC律所</a>
+            <a href="https://www.keith.law/" target="_blank" rel="noopener">KEITH律所</a>
+            <a href="https://www.sz-cbea.com/" target="_blank" rel="noopener">深跨协</a>
+            <a href="https://www.sellersprite.com/" target="_blank" rel="noopener">卖家精灵</a>
+            <a href="https://www.amz123.com/" target="_blank" rel="noopener">AMZ123</a>
+            <a href="https://www.10100.com/" target="_blank" rel="noopener">大数跨境</a>
+            <a href="https://eric-bot.com/" target="_blank" rel="noopener">睿观查侵权</a>
+            <a href="https://www.amzdh.com/" target="_blank" rel="noopener">AMZDH跨境电商</a>
+            <a href="https://www.chwang.com/" target="_blank" rel="noopener">出海网</a>
+            <a href="https://www.trotracker.com" target="_blank" rel="noopener">TROTracker</a>
+            <a href="https://www.uspto.gov" target="_blank" rel="noopener">USPTO</a>
+            <a href="https://www.cnipa.gov.cn" target="_blank" rel="noopener">CNIPA</a>
+        </div>
+        <!-- SEO Keywords (hidden for SEO crawlers) -->
+        <div class="seo-keywords" aria-hidden="true">
+            <span>美国律师</span><span>涉外律师</span><span>涉外出海</span><span>亚马逊侵权</span><span>TRO侵权和解</span><span>TRO组团和解</span><span>亚马逊侵权申诉</span><span>TRO和解</span><span>TRO侵权</span><span>GBC律所</span><span>Keith律所</span><span>商标注册</span><span>专利注册</span><span>版权注册</span><span>跨境电商律师</span><span>冻结资金解冻</span><span>临时限制令</span><span>TRO应诉</span><span>知识产权保护</span>
         </div>
         <div class="footer-bottom">
             <span>&copy; 2024-2026 TRO稻草人 | 天册律师事务所 | 微信: mylearnedfriend</span>
