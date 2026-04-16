@@ -1,0 +1,20 @@
+# Claude Code 本地缓存
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 密钥（保险起见，GitHub Secrets 才是正道）
+.env
+.env.*
+*.key
+
+# macOS
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
