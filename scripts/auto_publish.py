@@ -467,28 +467,94 @@ def call_llm(system: str, user: str, max_tokens: int = 8000) -> str:
 
 
 def _call_gemini(system: str, user: str, max_tokens: int) -> str:
-    """调用 Google Gemini API（免费额度 1500/天）。"""
+    """调用 Google Gemini API（免费额度），带 429 重试和清晰错误。"""
     if not GEMINI_API_KEY:
         raise RuntimeError("缺少 GEMINI_API_KEY 环境变量")
-    url = (
-        f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+
+    # 多个候选模型：主模型失败时自动降级
+    candidate_models = [GEMINI_MODEL]
+    # 若用户未显式指定，额外准备几个保底模型
+    if GEMINI_MODEL == "gemini-2.0-flash":
+        candidate_models.extend(["gemini-1.5-flash", "gemini-1.5-flash-8b"])
+
+    last_error: Exception | None = None
+    for model_name in candidate_models:
+        url = (
+            f"https://generativelanguage.googleapis.com/v1beta/models/"
+            f"{model_name}:generateContent?key={GEMINI_API_KEY}"
+        )
+        payload = {
+            "systemInstruction": {"parts": [{"text": system}]},
+            "contents": [{"role": "user", "parts": [{"text": user}]}],
+            "generationConfig": {
+                "temperature": 0.7,
+                "maxOutputTokens": max_tokens,
+            },
+        }
+
+        # 每个模型最多重试 2 次（429 等待 30s 后重试一次）
+        for attempt in range(2):
+            try:
+                r = requests.post(url, json=payload, timeout=180)
+            except requests.RequestException as e:
+                last_error = e
+                print(f"[warn] Gemini {model_name} 网络异常: {e}", file=sys.stderr)
+                break
+
+            if r.status_code == 200:
+                data = r.json()
+                try:
+                    text = data["candidates"][0]["content"]["parts"][0]["text"]
+                    if model_name != GEMINI_MODEL:
+                        print(f"[info] 已降级到 {model_name} 成功生成")
+                    return text
+                except (KeyError, IndexError) as e:
+                    # 可能是 safety filter / finish_reason 异常
+                    print(
+                        f"[warn] Gemini {model_name} 返回无 text："
+                        f"finish_reason={data.get('candidates', [{}])[0].get('finishReason')} "
+                        f"body={json.dumps(data, ensure_ascii=False)[:500]}",
+                        file=sys.stderr,
+                    )
+                    last_error = e
+                    break
+
+            # 非 200：打印详细错误
+            try:
+                err_body = r.json()
+            except Exception:
+                err_body = {"raw": r.text[:500]}
+            err_msg = err_body.get("error", {}).get("message", str(err_body))[:400]
+            print(
+                f"[warn] Gemini {model_name} HTTP {r.status_code}: {err_msg}",
+                file=sys.stderr,
+            )
+            last_error = requests.exceptions.HTTPError(
+                f"{r.status_code}: {err_msg}", response=r
+            )
+
+            # 429 第一次尝试失败，等 30s 重试一次
+            if r.status_code == 429 and attempt == 0:
+                import time
+                print(f"[info] 429 rate limit，等 30 秒后重试 {model_name}...")
+                time.sleep(30)
+                continue
+
+            # 其他错误（400 / 403 / 404 等）：不重试，直接换下一个模型
+            break
+
+    # 所有模型全失败
+    diag = (
+        "\n所有候选 Gemini 模型全部失败。可能原因：\n"
+        "  1. API Key 刚创建未激活（等 5-10 分钟）\n"
+        "  2. Google Cloud project 没开启 'Generative Language API'\n"
+        "  3. 所在区域不支持（中国大陆 Google 账号常见）\n"
+        "  4. 每日免费配额已耗尽（次日 UTC 0 点重置）\n"
+        "  5. 组织账号无 API 访问权限\n"
+        "→ 可改用 Claude 付费方案：在 Repo Settings → Variables 加 LLM_PROVIDER=claude，\n"
+        "  Secrets 加 ANTHROPIC_API_KEY。"
     )
-    payload = {
-        "systemInstruction": {"parts": [{"text": system}]},
-        "contents": [{"role": "user", "parts": [{"text": user}]}],
-        "generationConfig": {
-            "temperature": 0.7,
-            "maxOutputTokens": max_tokens,
-        },
-    }
-    r = requests.post(url, json=payload, timeout=180)
-    r.raise_for_status()
-    data = r.json()
-    try:
-        return data["candidates"][0]["content"]["parts"][0]["text"]
-    except (KeyError, IndexError) as e:
-        raise RuntimeError(f"Gemini 返回格式异常: {data}") from e
+    raise RuntimeError(f"Gemini API 调用失败: {last_error}{diag}")
 
 
 def _call_claude(system: str, user: str, max_tokens: int) -> str:
