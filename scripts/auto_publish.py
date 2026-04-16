@@ -35,12 +35,17 @@ ARTICLES_JSON = NEWS_DIR / "articles.json"
 INDEX_HTML = REPO_ROOT / "index.html"
 ARCHIVE_HTML = NEWS_DIR / "index.html"
 
-# LLM 提供商：gemini（免费，默认） 或 claude（付费，质量更稳）
-LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "gemini").lower()
+# LLM 提供商：deepseek（接近免费，推荐中国用户）/ gemini（美国区免费） / claude（付费质量稳）
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "deepseek").lower()
 
-# Gemini 相关（免费方案，推荐）
+# DeepSeek 相关（接近免费：充 1 元跑 100+ 篇，支持支付宝/微信）
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+DEEPSEEK_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+
+# Gemini 相关（美国区账号免费，中国区常见 limit=0）
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 # Claude 相关（付费方案）
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
@@ -456,14 +461,49 @@ CAT_CLASS = {
 # ==================== LLM 抽象层 ====================
 
 def call_llm(system: str, user: str, max_tokens: int = 8000) -> str:
-    """根据 LLM_PROVIDER 调用 Gemini 或 Claude，返回生成文本。"""
+    """根据 LLM_PROVIDER 调用 LLM，返回生成文本。"""
+    if LLM_PROVIDER == "deepseek":
+        return _call_deepseek(system, user, max_tokens)
     if LLM_PROVIDER == "gemini":
         return _call_gemini(system, user, max_tokens)
     if LLM_PROVIDER == "claude":
         return _call_claude(system, user, max_tokens)
     raise RuntimeError(
-        f"未知的 LLM_PROVIDER: {LLM_PROVIDER!r}（必须是 'gemini' 或 'claude'）"
+        f"未知的 LLM_PROVIDER: {LLM_PROVIDER!r}（必须是 'deepseek'、'gemini' 或 'claude'）"
     )
+
+
+def _call_deepseek(system: str, user: str, max_tokens: int) -> str:
+    """调用 DeepSeek Chat API（OpenAI 兼容接口，支持中国支付）。"""
+    if not DEEPSEEK_API_KEY:
+        raise RuntimeError("缺少 DEEPSEEK_API_KEY 环境变量")
+    url = f"{DEEPSEEK_BASE_URL}/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+        "Content-Type": "application/json",
+    }
+    payload = {
+        "model": DEEPSEEK_MODEL,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ],
+        "temperature": 0.7,
+        "max_tokens": max_tokens,
+        "stream": False,
+    }
+    r = requests.post(url, headers=headers, json=payload, timeout=180)
+    if r.status_code != 200:
+        try:
+            err = r.json().get("error", {}).get("message", r.text[:300])
+        except Exception:
+            err = r.text[:300]
+        raise RuntimeError(f"DeepSeek HTTP {r.status_code}: {err}")
+    data = r.json()
+    try:
+        return data["choices"][0]["message"]["content"]
+    except (KeyError, IndexError) as e:
+        raise RuntimeError(f"DeepSeek 返回格式异常: {data}") from e
 
 
 def _call_gemini(system: str, user: str, max_tokens: int) -> str:
@@ -473,9 +513,11 @@ def _call_gemini(system: str, user: str, max_tokens: int) -> str:
 
     # 多个候选模型：主模型失败时自动降级
     candidate_models = [GEMINI_MODEL]
-    # 若用户未显式指定，额外准备几个保底模型
-    if GEMINI_MODEL == "gemini-2.0-flash":
-        candidate_models.extend(["gemini-1.5-flash", "gemini-1.5-flash-8b"])
+    # 若用户未显式指定，额外准备几个保底模型（按 2026 年在架列表）
+    if GEMINI_MODEL in ("gemini-2.5-flash", "gemini-2.0-flash"):
+        for fb in ("gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite"):
+            if fb not in candidate_models:
+                candidate_models.append(fb)
 
     last_error: Exception | None = None
     for model_name in candidate_models:
@@ -545,14 +587,10 @@ def _call_gemini(system: str, user: str, max_tokens: int) -> str:
 
     # 所有模型全失败
     diag = (
-        "\n所有候选 Gemini 模型全部失败。可能原因：\n"
-        "  1. API Key 刚创建未激活（等 5-10 分钟）\n"
-        "  2. Google Cloud project 没开启 'Generative Language API'\n"
-        "  3. 所在区域不支持（中国大陆 Google 账号常见）\n"
-        "  4. 每日免费配额已耗尽（次日 UTC 0 点重置）\n"
-        "  5. 组织账号无 API 访问权限\n"
-        "→ 可改用 Claude 付费方案：在 Repo Settings → Variables 加 LLM_PROVIDER=claude，\n"
-        "  Secrets 加 ANTHROPIC_API_KEY。"
+        "\n所有候选 Gemini 模型全部失败。若错误含 'limit: 0' 或 'quota exceeded'：\n"
+        "  → 你的 Google 账号在此区域没有 Gemini 免费额度（中国大陆账号常见）\n"
+        "  → 换用 DeepSeek 接近免费方案：Variables 加 LLM_PROVIDER=deepseek，Secrets 加 DEEPSEEK_API_KEY\n"
+        "  → 或 Claude 付费方案：Variables 加 LLM_PROVIDER=claude，Secrets 加 ANTHROPIC_API_KEY"
     )
     raise RuntimeError(f"Gemini API 调用失败: {last_error}{diag}")
 
@@ -921,21 +959,31 @@ def update_archive(articles: list[dict[str, Any]]) -> None:
 
 def main() -> int:
     # 校验当前 provider 对应的 API Key
-    if LLM_PROVIDER == "gemini":
+    if LLM_PROVIDER == "deepseek":
+        if not DEEPSEEK_API_KEY:
+            print("[error] LLM_PROVIDER=deepseek 但缺少 DEEPSEEK_API_KEY 环境变量", file=sys.stderr)
+            return 1
+        current_model = DEEPSEEK_MODEL
+    elif LLM_PROVIDER == "gemini":
         if not GEMINI_API_KEY:
             print("[error] LLM_PROVIDER=gemini 但缺少 GEMINI_API_KEY 环境变量", file=sys.stderr)
             return 1
+        current_model = GEMINI_MODEL
     elif LLM_PROVIDER == "claude":
         if not ANTHROPIC_API_KEY:
             print("[error] LLM_PROVIDER=claude 但缺少 ANTHROPIC_API_KEY 环境变量", file=sys.stderr)
             return 1
+        current_model = CLAUDE_MODEL
     else:
-        print(f"[error] 未知的 LLM_PROVIDER: {LLM_PROVIDER!r}（必须是 'gemini' 或 'claude'）", file=sys.stderr)
+        print(
+            f"[error] 未知的 LLM_PROVIDER: {LLM_PROVIDER!r}"
+            f"（必须是 'deepseek'、'gemini' 或 'claude'）",
+            file=sys.stderr,
+        )
         return 1
 
     print(
-        f"[start] provider={LLM_PROVIDER} "
-        f"model={GEMINI_MODEL if LLM_PROVIDER=='gemini' else CLAUDE_MODEL} "
+        f"[start] provider={LLM_PROVIDER} model={current_model} "
         f"DRY_RUN={DRY_RUN} UTC={datetime.now(timezone.utc).isoformat()}"
     )
 
