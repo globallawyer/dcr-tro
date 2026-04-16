@@ -26,8 +26,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-import anthropic
-import requests
+import requests  # anthropic 仅在 LLM_PROVIDER=claude 时才 import
 
 # ==================== 配置 ====================
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -36,13 +35,22 @@ ARTICLES_JSON = NEWS_DIR / "articles.json"
 INDEX_HTML = REPO_ROOT / "index.html"
 ARCHIVE_HTML = NEWS_DIR / "index.html"
 
+# LLM 提供商：gemini（免费，默认） 或 claude（付费，质量更稳）
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "gemini").lower()
+
+# Gemini 相关（免费方案，推荐）
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+
+# Claude 相关（付费方案）
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-5-20250929")
+
+# 法院数据源
 COURTLISTENER_TOKEN = os.environ.get("COURTLISTENER_TOKEN", "")
 
 # 不在生产环境则允许 dry-run（只打印不写文件）
 DRY_RUN = os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes")
-
-MODEL = "claude-sonnet-4-5-20250929"
 
 # Schedule A 常见法院代码
 TRO_COURTS = ["ilnd", "flmd", "gand", "cacd", "nysd", "txed"]
@@ -445,10 +453,61 @@ CAT_CLASS = {
 }
 
 
-def generate_case_article(case: dict[str, Any]) -> dict[str, Any]:
-    """用 Claude 为具体案件生成文章。返回 {html, meta}。"""
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+# ==================== LLM 抽象层 ====================
 
+def call_llm(system: str, user: str, max_tokens: int = 8000) -> str:
+    """根据 LLM_PROVIDER 调用 Gemini 或 Claude，返回生成文本。"""
+    if LLM_PROVIDER == "gemini":
+        return _call_gemini(system, user, max_tokens)
+    if LLM_PROVIDER == "claude":
+        return _call_claude(system, user, max_tokens)
+    raise RuntimeError(
+        f"未知的 LLM_PROVIDER: {LLM_PROVIDER!r}（必须是 'gemini' 或 'claude'）"
+    )
+
+
+def _call_gemini(system: str, user: str, max_tokens: int) -> str:
+    """调用 Google Gemini API（免费额度 1500/天）。"""
+    if not GEMINI_API_KEY:
+        raise RuntimeError("缺少 GEMINI_API_KEY 环境变量")
+    url = (
+        f"https://generativelanguage.googleapis.com/v1beta/models/"
+        f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+    )
+    payload = {
+        "systemInstruction": {"parts": [{"text": system}]},
+        "contents": [{"role": "user", "parts": [{"text": user}]}],
+        "generationConfig": {
+            "temperature": 0.7,
+            "maxOutputTokens": max_tokens,
+        },
+    }
+    r = requests.post(url, json=payload, timeout=180)
+    r.raise_for_status()
+    data = r.json()
+    try:
+        return data["candidates"][0]["content"]["parts"][0]["text"]
+    except (KeyError, IndexError) as e:
+        raise RuntimeError(f"Gemini 返回格式异常: {data}") from e
+
+
+def _call_claude(system: str, user: str, max_tokens: int) -> str:
+    """调用 Anthropic Claude API。"""
+    import anthropic  # 延迟 import，避免 gemini 路径也要装这个包
+    if not ANTHROPIC_API_KEY:
+        raise RuntimeError("缺少 ANTHROPIC_API_KEY 环境变量")
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    resp = client.messages.create(
+        model=CLAUDE_MODEL,
+        max_tokens=max_tokens,
+        system=system,
+        messages=[{"role": "user", "content": user}],
+    )
+    return resp.content[0].text
+
+
+def generate_case_article(case: dict[str, Any]) -> dict[str, Any]:
+    """为具体案件生成文章（使用当前 LLM_PROVIDER）。返回 {html, meta}。"""
     category = "alert" if "schedule a" in case["case_name"].lower() else "warn"
     category_label = "案件速报" if category == "alert" else "行业预警"
     category_icon = "fa-bolt" if category == "alert" else "fa-exclamation-triangle"
@@ -489,14 +548,7 @@ def generate_case_article(case: dict[str, Any]) -> dict[str, Any]:
 
 现在请完整输出 HTML，不要任何解释。"""
 
-    resp = client.messages.create(
-        model=MODEL,
-        max_tokens=8000,
-        system=ARTICLE_PROMPT_SYSTEM,
-        messages=[{"role": "user", "content": user_prompt}],
-    )
-
-    html = resp.content[0].text.strip()
+    html = call_llm(ARTICLE_PROMPT_SYSTEM, user_prompt, max_tokens=8000).strip()
     # 如果模型返回 markdown 代码块，剥掉
     html = re.sub(r"^```html\s*\n", "", html)
     html = re.sub(r"\n```\s*$", "", html)
@@ -514,9 +566,7 @@ def generate_case_article(case: dict[str, Any]) -> dict[str, Any]:
 
 
 def generate_evergreen_article(topic: dict[str, Any]) -> dict[str, Any]:
-    """没有新案件时，用保底选题生成文章。"""
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
+    """没有新案件时，用保底选题生成文章（使用当前 LLM_PROVIDER）。"""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     user_prompt = f"""请写一篇 TRO 相关的 **{topic['category_label']}** 文章（1000-1500字）。
 
@@ -546,14 +596,7 @@ def generate_evergreen_article(topic: dict[str, Any]) -> dict[str, Any]:
 
 现在请完整输出 HTML，不要任何解释。"""
 
-    resp = client.messages.create(
-        model=MODEL,
-        max_tokens=10000,
-        system=ARTICLE_PROMPT_SYSTEM,
-        messages=[{"role": "user", "content": user_prompt}],
-    )
-
-    html = resp.content[0].text.strip()
+    html = call_llm(ARTICLE_PROMPT_SYSTEM, user_prompt, max_tokens=10000).strip()
     html = re.sub(r"^```html\s*\n", "", html)
     html = re.sub(r"\n```\s*$", "", html)
 
@@ -811,11 +854,24 @@ def update_archive(articles: list[dict[str, Any]]) -> None:
 # ==================== 主流程 ====================
 
 def main() -> int:
-    if not ANTHROPIC_API_KEY:
-        print("[error] 缺少 ANTHROPIC_API_KEY 环境变量", file=sys.stderr)
+    # 校验当前 provider 对应的 API Key
+    if LLM_PROVIDER == "gemini":
+        if not GEMINI_API_KEY:
+            print("[error] LLM_PROVIDER=gemini 但缺少 GEMINI_API_KEY 环境变量", file=sys.stderr)
+            return 1
+    elif LLM_PROVIDER == "claude":
+        if not ANTHROPIC_API_KEY:
+            print("[error] LLM_PROVIDER=claude 但缺少 ANTHROPIC_API_KEY 环境变量", file=sys.stderr)
+            return 1
+    else:
+        print(f"[error] 未知的 LLM_PROVIDER: {LLM_PROVIDER!r}（必须是 'gemini' 或 'claude'）", file=sys.stderr)
         return 1
 
-    print(f"[start] DRY_RUN={DRY_RUN}  UTC={datetime.now(timezone.utc).isoformat()}")
+    print(
+        f"[start] provider={LLM_PROVIDER} "
+        f"model={GEMINI_MODEL if LLM_PROVIDER=='gemini' else CLAUDE_MODEL} "
+        f"DRY_RUN={DRY_RUN} UTC={datetime.now(timezone.utc).isoformat()}"
+    )
 
     # 1. 加载已有文章列表
     data = load_articles_json()

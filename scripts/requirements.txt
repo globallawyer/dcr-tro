@@ -1,2 +1,6 @@
-anthropic>=0.39.0
+# 核心依赖：HTTP 客户端（Gemini/CourtListener 都用它）
 requests>=2.31.0
+
+# 只有 LLM_PROVIDER=claude 时才需要；Gemini 方案不需要装这个
+# 为了不让 pip 报错，默认保留安装（~3MB，不影响什么）
+anthropic>=0.39.0
