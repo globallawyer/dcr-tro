@@ -12,11 +12,36 @@
     "views": "阅读量（int）",
     "author": "作者名",
     "hot": "是否 HOT 标记",
-    "tags": ["标签1", "标签2"],
+    "tags": [
+      "标签1",
+      "标签2"
+    ],
     "case_no": "案号（可选）",
     "source": "manual | auto"
   },
   "articles": [
+    {
+      "date": "2026-04-16",
+      "slug": "tro-26cv03935",
+      "title": "【案件速报】版权诉讼再起波澜 · Kristy Beth Patterson 诉多名卖家案观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年4月9日，原告Kristy Beth Patterson在伊利诺伊州北区联邦法院发起一起版权侵权诉讼，案号为1:26-cv-03935。本案以Schedule A形式起诉多名被告，诉因明确为版权侵权。稻草人研究部为您带来案件速报与初步分析。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "TRO速报",
+        "1:26-cv-03935",
+        "Kristy Beth Patterson",
+        "版权侵权",
+        "Schedule A"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-03935"
+    },
     {
       "date": "2026-04-15",
       "slug": "skechers-tro-26cv00626",
@@ -29,7 +54,11 @@
       "views": 2341,
       "author": "张兆新",
       "hot": true,
-      "tags": ["Skechers维权", "GBC律所", "Schedule A"],
+      "tags": [
+        "Skechers维权",
+        "GBC律所",
+        "Schedule A"
+      ],
       "case_no": "1:26-cv-00626",
       "source": "manual"
     },
@@ -45,7 +74,11 @@
       "views": 1856,
       "author": "张兆新",
       "hot": false,
-      "tags": ["GBC律所", "Nike", "Schedule A"],
+      "tags": [
+        "GBC律所",
+        "Nike",
+        "Schedule A"
+      ],
       "case_no": "1:26-cv-02756",
       "source": "manual"
     },
@@ -61,7 +94,11 @@
       "views": 1423,
       "author": "张兆新",
       "hot": false,
-      "tags": ["胜诉案例", "UGG TRO", "冻结资金解冻"],
+      "tags": [
+        "胜诉案例",
+        "UGG TRO",
+        "冻结资金解冻"
+      ],
       "source": "manual"
     },
     {
@@ -76,7 +113,11 @@
       "views": 1102,
       "author": "张兆新",
       "hot": false,
-      "tags": ["Keith律所", "TRO预警", "多品牌起诉"],
+      "tags": [
+        "Keith律所",
+        "TRO预警",
+        "多品牌起诉"
+      ],
       "source": "manual"
     },
     {
@@ -91,7 +132,11 @@
       "views": 3924,
       "author": "张兆新",
       "hot": false,
-      "tags": ["TRO新手指南", "黄金72小时", "冻结资金"],
+      "tags": [
+        "TRO新手指南",
+        "黄金72小时",
+        "冻结资金"
+      ],
       "source": "manual"
     },
     {
@@ -106,7 +151,11 @@
       "views": 1523,
       "author": "张兆新",
       "hot": false,
-      "tags": ["UGG", "组团和解", "胜诉案例"],
+      "tags": [
+        "UGG",
+        "组团和解",
+        "胜诉案例"
+      ],
       "source": "manual"
     },
     {
@@ -121,7 +170,11 @@
       "views": 3127,
       "author": "稻草人研究部",
       "hot": false,
-      "tags": ["2026 Q1", "TRO数据报告", "行业分析"],
+      "tags": [
+        "2026 Q1",
+        "TRO数据报告",
+        "行业分析"
+      ],
       "source": "manual"
     },
     {
@@ -136,7 +189,11 @@
       "views": 4856,
       "author": "张兆新",
       "hot": false,
-      "tags": ["TRO预防", "侵权审查", "合规checklist"],
+      "tags": [
+        "TRO预防",
+        "侵权审查",
+        "合规checklist"
+      ],
       "source": "manual"
     }
   ]
