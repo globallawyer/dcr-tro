@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-04-17",
+      "slug": "tro-26cv04062",
+      "title": "【案件速报】Winnie Rosaline Kan 发起TRO诉讼 · 1:26-cv-04062 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年4月13日，原告Winnie Rosaline Kan在伊利诺伊州北区联邦地区法院发起TRO诉讼，案号1:26-cv-04062。本案为典型的Schedule A批量诉讼，针对多名电商平台卖家。稻草人研究部为您带来案件速报与初步分析。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "Winnie Rosaline Kan",
+        "TRO速报",
+        "1:26-cv-04062",
+        "伊利诺伊北区法院",
+        "Schedule A"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-04062"
+    },
+    {
       "date": "2026-04-16",
       "slug": "tro-26cv03935",
       "title": "【案件速报】版权诉讼再起波澜 · Kristy Beth Patterson 诉多名卖家案观察",
