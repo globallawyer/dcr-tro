@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-04-20",
+      "slug": "tro-26cv04239",
+      "title": "【案件速报】专利830号突袭，伊利诺伊北区法院再发TRO · 1:26-cv-04239 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年4月15日，案号为1:26-cv-04239的专利侵权TRO案件在伊利诺伊北区法院立案。原告Li针对Schedule A名单上的大批卖家，以美国专利第830号发起诉讼。本案未明确品牌，凸显了专利类TRO的隐蔽性与广泛打击面。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "TRO速报",
+        "1:26-cv-04239",
+        "830专利",
+        "伊利诺伊北区法院",
+        "专利侵权"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-04239"
+    },
+    {
       "date": "2026-04-17",
       "slug": "tro-26cv04062",
       "title": "【案件速报】Winnie Rosaline Kan 发起TRO诉讼 · 1:26-cv-04062 观察",
