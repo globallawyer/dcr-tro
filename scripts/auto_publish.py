@@ -744,7 +744,43 @@ def extract_article_meta(html: str) -> dict[str, Any]:
     }
 
 
-# ==================== 首页 + 归档页渲染 ====================
+# ==================== 首页 Ticker + News + 归档页渲染 ====================
+
+
+def render_ticker(articles: list[dict[str, Any]]) -> str:
+    """把 articles 前 6 条渲染成跑马灯 ticker（重复一次实现无缝滚动）。"""
+    items = []
+    for a in articles[:6]:
+        cat = a.get("category", "analysis")
+        # 标签类型：warn/alert → 预警；win → 胜诉/和解；其他 → NEW
+        if cat in ("warn", "alert"):
+            tag = '<span class="tag-warn">预警</span>'
+        elif cat == "win":
+            tag = '<span class="tag-win">胜诉</span>'
+        else:
+            tag = '<span class="tag-new">NEW</span>'
+
+        # 标题截短到 30 字
+        title = a.get("title", "")
+        if len(title) > 30:
+            title = title[:28] + "…"
+
+        # 日期 MM-DD
+        try:
+            d = datetime.fromisoformat(a["date"])
+            badge = d.strftime("%m-%d")
+        except Exception:
+            badge = a.get("date", "")[-5:]
+
+        items.append(
+            f'                <div class="ticker-item">{tag} {title} '
+            f'<span class="badge">{badge}</span></div>'
+        )
+
+    # 无缝滚动需要重复一份
+    single_block = "\n".join(items)
+    return f"{single_block}\n{single_block}"
+
 
 def render_homepage_news_block(articles: list[dict[str, Any]]) -> str:
     """把 articles 列表渲染成首页 news 区块（Featured + 侧边 4 条 + 下方 3 张卡）。"""
@@ -924,9 +960,28 @@ def replace_between_markers(content: str, start: str, end: str, new_body: str) -
 
 
 def update_homepage(articles: list[dict[str, Any]]) -> None:
-    """更新首页 index.html 的 news 区块。"""
+    """更新首页 index.html 的 ticker + news 区块。"""
     with open(INDEX_HTML, "r", encoding="utf-8") as f:
         content = f.read()
+
+    # 更新"最近更新"日期
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    content = re.sub(
+        r'最近更新 \d{4}-\d{2}-\d{2}',
+        f'最近更新 {today_str}',
+        content,
+    )
+
+    # 更新跑马灯 ticker
+    ticker_html = render_ticker(articles)
+    content = replace_between_markers(
+        content,
+        "<!-- AUTO-TICKER-START · 此区块由 scripts/auto_publish.py 自动重新生成 -->",
+        "<!-- AUTO-TICKER-END -->",
+        ticker_html,
+    )
+
+    # 更新新闻卡片区
     new_block = render_homepage_news_block(articles)
     content = replace_between_markers(
         content,
