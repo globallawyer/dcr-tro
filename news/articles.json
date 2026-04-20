@@ -22,6 +22,28 @@
   "articles": [
     {
       "date": "2026-04-20",
+      "slug": "tro-26cv04147",
+      "title": "【案件速报】环球影业再启TRO · 1:26-cv-04147 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年4月14日，环球影业在伊利诺伊州北区法院发起新TRO诉讼，案号1:26-cv-04147。本案以商标侵权为由，针对Schedule A名单上的多家电商卖家。稻草人研究部为您带来案件速报与初步分析。",
+      "read_time": "7分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "环球影业",
+        "Universal City Studios",
+        "TRO速报",
+        "1:26-cv-04147",
+        "商标侵权"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-04147"
+    },
+    {
+      "date": "2026-04-20",
       "slug": "tro-26cv04239",
       "title": "【案件速报】专利830号突袭，伊利诺伊北区法院再发TRO · 1:26-cv-04239 观察",
       "category": "alert",
