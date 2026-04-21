@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-04-21",
+      "slug": "tro-26cv04254",
+      "title": "【案件速报】版权诉因TRO突袭，原告Andrew Blair Bailie启动诉讼 · 1:26-cv-04254 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年4月16日，美国伊利诺伊州北区地方法院受理案号为1:26-cv-04254的TRO案件，原告Andrew Blair Bailie以版权侵权为由，对Schedule A名单上的多名被告提起诉讼。本案诉因明确指向版权，卖家需警惕相关产品风险。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "Andrew Blair Bailie",
+        "TRO速报",
+        "版权侵权",
+        "820 Copyright",
+        "伊利诺伊北区法院"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-04254"
+    },
+    {
       "date": "2026-04-20",
       "slug": "tro-26cv04147",
       "title": "【案件速报】环球影业再启TRO · 1:26-cv-04147 观察",
