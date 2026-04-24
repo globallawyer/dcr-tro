@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-04-24",
+      "slug": "tro-26cv04517",
+      "title": "【案件速报】Kevin Vigil 版权案突袭 · 1:26-cv-04517 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年4月22日，Kevin Vigil在伊利诺伊北区联邦法院提起版权侵权诉讼（1:26-cv-04517），针对Schedule A被告启动TRO程序。稻草人研究部第一时间分析案件特征，解读版权诉因下的冻结风险，并提供卖家应对建议。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "KevinVigil",
+        "TRO速报",
+        "版权侵权",
+        "伊利诺伊北区法院",
+        "1:26-cv-04517"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-04517"
+    },
+    {
       "date": "2026-04-23",
       "slug": "tro-26cv00405",
       "title": "【案件速报】版权诉因TRO突袭德州东区法院 · 4:26-cv-00405 观察",
