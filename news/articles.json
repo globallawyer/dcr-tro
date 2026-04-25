@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-04-25",
+      "slug": "auto-202604250441",
+      "title": "【深度】Schedule A 批量诉讼：TRO浪潮下的法律本质与卖家生存法则",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-gavel",
+      "excerpt": "深度解读 Schedule A 批量诉讼机制的法律依据、程序特点及对跨境电商卖家的影响。结合TROTracker监控数据与500+案件经验，揭示维权新常态下的应对策略。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "ScheduleA",
+        "批量诉讼",
+        "TRO深度分析",
+        "跨境电商法律",
+        "美国联邦诉讼规则"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-04-24",
       "slug": "tro-26cv04517",
       "title": "【案件速报】Kevin Vigil 版权案突袭 · 1:26-cv-04517 观察",
