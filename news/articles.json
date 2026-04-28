@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-04-28",
+      "slug": "tro-26cv04666",
+      "title": "【案件速报】匿名原告Li发起TRO · 1:26-cv-04666 立案观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年4月24日，伊利诺伊州北区联邦法院新立案1:26-cv-04666，原告Li以Schedule A形式起诉多名被告，品牌与诉因暂未公开。稻草人第一时间发出速报，提示卖家自查。",
+      "read_time": "7分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "TRO速报",
+        "1:26-cv-04666",
+        "Li",
+        "伊利诺伊州北区法院",
+        "Schedule A"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-04666"
+    },
+    {
       "date": "2026-04-27",
       "slug": "auto-202604270531",
       "title": "商标 vs 版权 vs 外观专利：TRO 案件三大诉因深度拆解，卖家必读",
