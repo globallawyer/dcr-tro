@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-05-01",
+      "slug": "tro-26cv04485",
+      "title": "【案件速报】David Park诉Nelson Yu TRO立案 · 2:26-cv-04485 观察",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "2026年4月27日，David Park在加州中区联邦法院对Nelson Yu提起诉讼（案号2:26-cv-04485），申请TRO。案件品牌未明确，但诉因指向知识产权侵权。稻草人团队分析诉讼特征并提供卖家应对建议。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "David Park",
+        "Nelson Yu",
+        "2:26-cv-04485",
+        "TRO速报",
+        "行业预警"
+      ],
+      "source": "auto",
+      "case_no": "2:26-cv-04485"
+    },
+    {
       "date": "2026-04-30",
       "slug": "tro-26cv04840",
       "title": "【案件速报】Stephanie Pui-Mun Law再度启动TRO · 1:26-cv-04840 观察",
