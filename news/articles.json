@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-05-02",
+      "slug": "tro-26cv01050",
+      "title": "【案件速报】Focus Financial Partners LLC 再度启动TRO · 8:26-cv-01050 观察",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "2026年5月1日，Focus Financial Partners LLC 在加州中区联邦法院提起TRO诉讼，案号8:26-cv-01050，诉因涉及840类商标侵权。稻草人研究部第一时间解读案件特征及卖家应对策略。",
+      "read_time": "7分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "Focus Financial Partners",
+        "TRO速报",
+        "商标侵权",
+        "加州中区法院",
+        "8:26-cv-01050"
+      ],
+      "source": "auto",
+      "case_no": "8:26-cv-01050"
+    },
+    {
       "date": "2026-05-01",
       "slug": "tro-26cv04485",
       "title": "【案件速报】David Park诉Nelson Yu TRO立案 · 2:26-cv-04485 观察",
