@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-05-03",
+      "slug": "深度干货美国联邦法院律师选择指南bar-admission",
+      "title": "【深度干货】美国联邦法院律师选择指南：Bar Admission / Federal Court Admission / Pro Hac Vice 全解析",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-user-tie",
+      "excerpt": "跨境电商卖家遇到TRO冻结，如何挑选真正有资格的美国律师？本文深度解析Bar Admission、Federal Court Admission与Pro Hac Vice三大概念的区别，并给出选择TRO律师的四大硬指标。500+案件经验告诉你：选错律师，不仅多花钱，还可能错过最佳应诉时机。",
+      "read_time": "12分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO律师选择",
+        "Bar Admission",
+        "Federal Court Admission",
+        "Pro Hac Vice",
+        "跨境电商法律"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-05-02",
       "slug": "tro-26cv01050",
       "title": "【案件速报】Focus Financial Partners LLC 再度启动TRO · 8:26-cv-01050 观察",
