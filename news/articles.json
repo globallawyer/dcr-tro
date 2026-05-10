@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-05-10",
+      "slug": "tro-26cv05019",
+      "title": "【案件速报】Lipa诉Samsung案TRO启动 · 2:26-cv-05019 观察",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "2026年5月8日，美国加州中区联邦法院立案 Lipa v. Samsung Electronics America, Inc. (2:26-cv-05019)，诉因涉及版权侵权。稻草人研究部第一时间解析案件特征，为跨境卖家提供应对建议。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "Lipa",
+        "Samsung",
+        "TRO速报",
+        "版权侵权",
+        "加州中区法院"
+      ],
+      "source": "auto",
+      "case_no": "2:26-cv-05019"
+    },
+    {
       "date": "2026-05-09",
       "slug": "auto-202605090528",
       "title": "深度干货：TRO和解协议必须看的8个条款，少看一个可能白签",
