@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-05-12",
+      "slug": "tro-26cv05288",
+      "title": "【案件速报】James Booker提起版权TRO · 1:26-cv-05288 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年5月7日，James Booker在伊利诺伊州北区法院提起TRO/Schedule A诉讼，案号1:26-cv-05288，诉因涉及版权侵权。稻草人研究部第一时间解析案件特征与卖家应对策略。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "James Booker",
+        "TRO速报",
+        "版权侵权",
+        "1:26-cv-05288",
+        "Schedule A"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-05288"
+    },
+    {
       "date": "2026-05-11",
       "slug": "auto-202605110606",
       "title": "深度剖析：为什么99%的Schedule A都在伊利诺伊北区法院立案？",
