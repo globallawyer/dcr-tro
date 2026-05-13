@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-05-13",
+      "slug": "tro-26cv05485",
+      "title": "【案件速报】Casetagram Limited 再度启动TRO · 1:26-cv-05485 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年5月12日，Casetagram Limited 在伊利诺伊州北区法院提起TRO诉讼，案号1:26-cv-05485。本案为Schedule A类型，涉及多名未具名被告。稻草人研究部第一时间解读案件特征与卖家应对策略。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "Casetagram",
+        "TRO速报",
+        "1:26-cv-05485",
+        "伊利诺伊州北区法院",
+        "Schedule A"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-05485"
+    },
+    {
       "date": "2026-05-12",
       "slug": "tro-26cv05288",
       "title": "【案件速报】James Booker提起版权TRO · 1:26-cv-05288 观察",
