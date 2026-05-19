@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-05-19",
+      "slug": "tro-26cv05195",
+      "title": "【案件速报】SISU LIFE LLC启动版权TRO · 2:26-cv-05195 观察",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "2026年5月14日，SISU LIFE LLC（dba California Maternity Leave Consulting）在加州中区联邦法院提起版权侵权诉讼，案号2:26-cv-05195，并申请TRO。案件涉及820版权诉因，目前被告信息尚未完全公开。稻草人研究部提醒跨境电商卖家注意排查相关产品，防范账户冻结风险。",
+      "read_time": "9分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "SISU LIFE",
+        "California Maternity Leave Consulting",
+        "版权TRO",
+        "TRO速报",
+        "2:26-cv-05195"
+      ],
+      "source": "auto",
+      "case_no": "2:26-cv-05195"
+    },
+    {
       "date": "2026-05-18",
       "slug": "tro-26cv05411",
       "title": "ABC Corporation 再度启动TRO行动 · 1:26-cv-05411 观察",
