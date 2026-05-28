@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-05-28",
+      "slug": "tro-26cv05927",
+      "title": "【案件速报】Tobias Roetsch 版权案立案 · 1:26-cv-05927 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年5月21日，Tobias Roetsch 在伊利诺伊北区联邦法院提起版权侵权诉讼（案号 1:26-cv-05927），针对 Schedule A 被告发起 TRO 申请。案件涉及820号版权，具体品牌尚未明确。稻草人研究部提供案件速报与卖家应对建议。",
+      "read_time": "7分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "Tobias Roetsch",
+        "1:26-cv-05927",
+        "版权侵权",
+        "TRO速报"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-05927"
+    },
+    {
       "date": "2026-05-27",
       "slug": "tro-26cv06012",
       "title": "【案件速报】Sophie Margaret Corrigan 版权案启动 TRO · 1:26-cv-06012 观察",
