@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-02",
+      "slug": "tro-26cv06429",
+      "title": "【案件速报】隐藏品牌再度启动TRO · 1:26-cv-06429 新案观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月1日，伊利诺伊州北区法院新立TRO案件1:26-cv-06429，原告Lorenza Scarsi针对Schedule A被告发起诉讼。品牌方身份尚未公开，案件策略值得卖家警惕。稻草人研究部第一时间解读。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "1:26-cv-06429",
+        "TRO速报",
+        "隐藏品牌",
+        "伊利诺伊北区",
+        "LorenzaScarsi"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06429"
+    },
+    {
       "date": "2026-06-01",
       "slug": "tro-26cv06263",
       "title": "【案件速报】Millimages S.A. 再度启动TRO · 1:26-cv-06263 观察",
