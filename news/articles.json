@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-03",
+      "slug": "tro-26cv06494",
+      "title": "【案件速报】Catherine Rayner品牌再度启动TRO · 1:26-cv-06494 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月2日，伊利诺伊州北区联邦法院新立案TRO案件1:26-cv-06494，原告Catherine Frances Rayner以Schedule A形式起诉多家跨境电商卖家。稻草人研究部第一时间解读案件特征与卖家应对策略。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "CatherineRayner",
+        "TRO速报",
+        "伊利诺伊州北区",
+        "1:26-cv-06494",
+        "跨境电商"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06494"
+    },
+    {
       "date": "2026-06-02",
       "slug": "tro-26cv06429",
       "title": "【案件速报】隐藏品牌再度启动TRO · 1:26-cv-06429 新案观察",
