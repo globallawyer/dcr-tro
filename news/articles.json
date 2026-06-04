@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-04",
+      "slug": "tro-26cv06484",
+      "title": "【案件速报】Rebecca Hayward再度启动TRO · 1:26-cv-06484 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月2日，Rebecca Hayward在伊利诺伊北区法院提起版权侵权诉讼（案号1:26-cv-06484），申请TRO及Schedule A资产冻结。案件涉及820版权诉因，原告身份及具体品牌暂未明确，但Schedule A模式预示多名卖家将面临账户冻结风险。稻草人研究部第一时间解读案件特征并提供应对建议。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "RebeccaHayward",
+        "1:26-cv-06484",
+        "版权TRO",
+        "ScheduleA",
+        "TRO速报"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06484"
+    },
+    {
       "date": "2026-06-03",
       "slug": "tro-26cv06494",
       "title": "【案件速报】Catherine Rayner品牌再度启动TRO · 1:26-cv-06494 观察",
