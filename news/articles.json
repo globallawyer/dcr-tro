@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-05",
+      "slug": "tro-26cv06543",
+      "title": "【案件速报】Amy Zaleski 版权案启动 TRO · 1:26-cv-06543 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月3日，伊利诺伊州北区联邦法院受理 Amy Zaleski 诉 Schedule A 被告版权侵权案，案号 1:26-cv-06543。诉因 820 Copyright，未明确品牌名称。稻草人研究部第一时间解读案件特征与卖家应对策略。",
+      "read_time": "9分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "Amy Zaleski",
+        "TRO速报",
+        "版权侵权",
+        "1:26-cv-06543",
+        "Schedule A"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06543"
+    },
+    {
       "date": "2026-06-04",
       "slug": "tro-26cv06484",
       "title": "【案件速报】Rebecca Hayward再度启动TRO · 1:26-cv-06484 观察",
