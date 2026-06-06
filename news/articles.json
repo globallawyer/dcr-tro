@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-06",
+      "slug": "tro-26cv06541",
+      "title": "【案件速报】Janna Salak 版权TRO立案 · 1:26-cv-06541 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月3日，伊利诺伊州北区联邦法院受理 Janna Salak 诉 Schedule A 被告版权侵权案（案号 1:26-cv-06541）。诉因820 Copyright，目前品牌及具体被告暂未公开。稻草人研究部第一时间解读案件特征与卖家应对策略。",
+      "read_time": "9分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "TRO速报",
+        "JannaSalak",
+        "版权侵权",
+        "1:26-cv-06541",
+        "ScheduleA"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06541"
+    },
+    {
       "date": "2026-06-05",
       "slug": "tro-26cv06543",
       "title": "【案件速报】Amy Zaleski 版权案启动 TRO · 1:26-cv-06543 观察",
