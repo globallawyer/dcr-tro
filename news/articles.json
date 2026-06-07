@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-07",
+      "slug": "tro-26cv00593",
+      "title": "【案件速报】深圳知美联创启动830专利TRO · 4:26-cv-00593 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月3日，深圳知美联创科技在德州东区法院提起830专利诉讼，案号4:26-cv-00593，涉及Schedule A被告。稻草人研究部解析案件特征与卖家应对策略。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "深圳知美联创",
+        "830专利",
+        "TRO速报",
+        "德州东区",
+        "ScheduleA"
+      ],
+      "source": "auto",
+      "case_no": "4:26-cv-00593"
+    },
+    {
       "date": "2026-06-06",
       "slug": "tro-26cv06541",
       "title": "【案件速报】Janna Salak 版权TRO立案 · 1:26-cv-06541 观察",
