@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-09",
+      "slug": "tro-26cv06611",
+      "title": "【案件速报】Susan Rios版权案TRO启动 · 1:26-cv-06611 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月4日，伊利诺伊州北区联邦法院受理 Susan Rios 版权侵权案件，案号 1:26-cv-06611，原告通过 Schedule A 起诉多名跨境电商卖家。稻草人研究部第一时间解读案件特征与应对策略。",
+      "read_time": "10分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "SusanRios",
+        "1:26-cv-06611",
+        "版权侵权",
+        "ScheduleA",
+        "TRO速报"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06611"
+    },
+    {
       "date": "2026-06-08",
       "slug": "tro-26cv06675",
       "title": "【案件速报】Sally Walsh 发起TRO · 1:26-cv-06675 观察",
