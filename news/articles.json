@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-10",
+      "slug": "tro-26cv06674",
+      "title": "【案件速报】Ilustrata Servicos Design 再度启动TRO · 1:26-cv-06674 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月4日，伊利诺伊州北区法院受理 Ilustrata Servicos Design, Ltda. 诉 Schedule A 被告案，案号1:26-cv-06674。稻草人研究部解析案件特征、诉讼风险及卖家应对策略。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "IlustrataServicosDesign",
+        "1:26-cv-06674",
+        "TRO速报",
+        "ScheduleA",
+        "伊利诺伊北区法院"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06674"
+    },
+    {
       "date": "2026-06-09",
       "slug": "tro-26cv06611",
       "title": "【案件速报】Susan Rios版权案TRO启动 · 1:26-cv-06611 观察",
