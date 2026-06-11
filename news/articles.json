@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-11",
+      "slug": "tro-26cv06648",
+      "title": "【案件速报】Sophie Margaret Corrigan 启动 TRO · 1:26-cv-06648 观察",
+      "category": "alert",
+      "category_label": "案件速报",
+      "category_icon": "fa-bolt",
+      "excerpt": "2026年6月4日，原告Sophie Margaret Corrigan于伊利诺伊北区联邦法院提起TRO诉讼，案号1:26-cv-06648，针对Schedule A被告。稻草人研究部第一时间解析案件特征与卖家应对策略。",
+      "read_time": "7分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "SophieCorrigan",
+        "TRO速报",
+        "伊利诺伊北区法院",
+        "跨境电商",
+        "和解策略"
+      ],
+      "source": "auto",
+      "case_no": "1:26-cv-06648"
+    },
+    {
       "date": "2026-06-10",
       "slug": "tro-26cv06674",
       "title": "【案件速报】Ilustrata Servicos Design 再度启动TRO · 1:26-cv-06674 观察",
