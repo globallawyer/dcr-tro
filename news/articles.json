@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-12",
+      "slug": "tro-26cv06270",
+      "title": "【案件速报】BioGaia品牌再度启动TRO · 2:26-cv-06270 观察",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "2026年6月9日，BioGaia USA, LLC在加州中区法院提起TRO诉讼，案号2:26-cv-06270，涉及商标侵权。稻草人研究部第一时间解读案件特征与卖家应对策略。",
+      "read_time": "7分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "BioGaia",
+        "TRO速报",
+        "2:26-cv-06270",
+        "商标侵权",
+        "加州中区法院"
+      ],
+      "source": "auto",
+      "case_no": "2:26-cv-06270"
+    },
+    {
       "date": "2026-06-11",
       "slug": "tro-26cv06648",
       "title": "【案件速报】Sophie Margaret Corrigan 启动 TRO · 1:26-cv-06648 观察",
