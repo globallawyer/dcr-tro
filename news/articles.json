@@ -21,6 +21,28 @@
   },
   "articles": [
     {
+      "date": "2026-06-14",
+      "slug": "tro-26cv01506",
+      "title": "【案件速报】暴雪娱乐再度启动TRO · 8:26-cv-01506 观察",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "2026年6月12日，暴雪娱乐Blizzard Entertainment向加州中区联邦法院提起诉讼（案号8:26-cv-01506），诉因涉及版权侵权。案件由TRO稻草人研究部第一时间监控并解读，为跨境卖家提供诉讼特征分析与应对建议。",
+      "read_time": "8分钟",
+      "views": 0,
+      "author": "稻草人研究部",
+      "hot": false,
+      "tags": [
+        "暴雪娱乐",
+        "Blizzard Entertainment",
+        "TRO速报",
+        "8:26-cv-01506",
+        "版权侵权"
+      ],
+      "source": "auto",
+      "case_no": "8:26-cv-01506"
+    },
+    {
       "date": "2026-06-13",
       "slug": "tro-26cv04982",
       "title": "【案件速报】Google LLC 启动RICO诉讼 · 1:26-cv-04982 观察",
