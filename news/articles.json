@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-06-15",
+      "slug": "auto-202606150730",
+      "title": "【深度】2026跨境电商IP维权趋势观察：五个不可忽视的转向",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，深度解析2026年TRO案件在品牌构成、律所策略、法院选择及地域分布上的五大趋势变化，为跨境电商卖家提供前瞻性预警与应对策略。",
+      "read_time": "13分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO趋势",
+        "2026预警",
+        "佛罗里达法院",
+        "新品牌维权",
+        "TROTracker"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-06-14",
       "slug": "tro-26cv01506",
       "title": "【案件速报】暴雪娱乐再度启动TRO · 8:26-cv-01506 观察",
