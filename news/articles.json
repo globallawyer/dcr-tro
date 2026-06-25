@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-06-25",
+      "slug": "auto-202606250615",
+      "title": "深度预警：2026年跨境电商IP维权趋势五大变化",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，深度解析2026年TRO案件在品牌、律所、法院、地域四大维度的趋势变化，揭示新锐律所崛起、高频被告名单、法院集中化等关键信号，为卖家提供前瞻性应对策略。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO趋势",
+        "2026预警",
+        "律所崛起",
+        "法院集中",
+        "和解成本"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-06-24",
       "slug": "auto-202606240613",
       "title": "深度干货：Schedule A 批量诉讼的法律本质——为何成为跨境电商维权\"核武器\"",
