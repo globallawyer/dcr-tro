@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-06-28",
+      "slug": "auto-202606280627",
+      "title": "深度干货：TRO和解协议必须看的8个条款，少看一条多赔10万",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-handshake",
+      "excerpt": "跨境电商卖家必读！TRO稻草人张兆新律师深度解读TRO和解协议中8个关键条款：Full Release、No Admission、Confidentiality等，帮你避开和解陷阱，安全解冻资金。",
+      "read_time": "15分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO和解协议",
+        "FullRelease",
+        "和解条款避坑",
+        "跨境电商法律",
+        "张兆新律师"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-06-27",
       "slug": "auto-202606270559",
       "title": "【深度干货】$200万赔偿红线：兰哈姆法法定赔偿计算全拆解",
