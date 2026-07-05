@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-07-05",
+      "slug": "auto-202607050612",
+      "title": "深度预警：2026年跨境电商IP维权四大趋势，卖家必须知道的生存法则",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，深度解析2026年TRO案件在品牌、律所、法院、地域四大维度的新趋势。GBC、HSP、Keith等律所策略升级，伊利诺伊北区法院垄断地位动摇，中国卖家面临更严峻的IP合规挑战。",
+      "read_time": "14分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO趋势",
+        "2026预警",
+        "GBC律所",
+        "HSP律所",
+        "专利维权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-07-04",
       "slug": "auto-202607040552",
       "title": "深度解读 Schedule A 批量诉讼：跨境电商卖家必须了解的法律本质",
