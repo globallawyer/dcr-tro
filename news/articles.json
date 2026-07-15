@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-07-15",
+      "slug": "auto-202607150457",
+      "title": "深度预警：2026年跨境电商IP维权四大趋势——品牌、律所、法院、地域全维度解析",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，深度分析2026年TRO案件在品牌、律所、法院、地域四大维度的趋势变化，为跨境电商卖家提供前瞻性风险预警与应对策略。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO趋势",
+        "2026预警",
+        "GBC",
+        "HSP",
+        "法院管辖"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-07-13",
       "slug": "auto-202607130546",
       "title": "深度干货：PayPal 资金冻结全流程详解——从冻结到解冻，卖家必读",
