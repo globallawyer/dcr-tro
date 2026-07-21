@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-07-21",
+      "slug": "auto-202607210528",
+      "title": "深度干货：跨境卖家必读的采购合规证据留存全攻略",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-file-contract",
+      "excerpt": "从供应商合同、发票、授权文件到产品检测报告，TRO稻草人详解跨境卖家留存采购合规证据的完整策略，助您在TRO诉讼中掌握主动权。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "采购合规",
+        "证据留存",
+        "TRO攻略",
+        "跨境法律",
+        "和解谈判"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-07-20",
       "slug": "auto-202607200546",
       "title": "深度干货：为什么所有Schedule A都扎堆伊利诺伊北区法院？卖家必读",
