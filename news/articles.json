@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-07-22",
+      "slug": "干货美国联邦法院律师选择指南bar-admissionfed",
+      "title": "干货｜美国联邦法院律师选择指南：Bar Admission、Federal Court Admission 与 Pro Hac Vice 全解析",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-user-tie",
+      "excerpt": "跨境电商卖家必读：深度解析美国律师Bar Admission、Federal Court Admission与Pro Hac Vice的区别，以及TRO案件中律师选择的硬指标。基于500+案件经验，助你避开律师选择陷阱。",
+      "read_time": "13分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO律师选择",
+        "BarAdmission",
+        "ProHacVice",
+        "联邦法院",
+        "跨境电商法律"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-07-21",
       "slug": "auto-202607210528",
       "title": "深度干货：跨境卖家必读的采购合规证据留存全攻略",
