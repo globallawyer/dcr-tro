@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-08-01",
+      "slug": "深度干货美国tro律师怎么选看懂bar-admission",
+      "title": "深度干货：美国TRO律师怎么选？看懂Bar Admission / Federal Court Admission / Pro Hac Vice三大牌照",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-user-tie",
+      "excerpt": "美国联邦法院律师资格有哪些层级？Bar Admission、Federal Court Admission、Pro Hac Vice到底有什么区别？TRO稻草人张兆新律师详解选择TRO律师的5个硬指标，帮你避开无资质律师的坑。",
+      "read_time": "12分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO律师选择",
+        "BarAdmission",
+        "ProHacVice",
+        "跨境电商法律"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-07-31",
       "slug": "auto-202607310541",
       "title": "深度干货：跨境卖家如何留存采购合规证据，TRO应诉必备护身符",
