@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-08-04",
+      "slug": "auto-202608040521",
+      "title": "深度预警：2026年跨境电商IP维权趋势五大变化，卖家必读",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，深度解析2026年TRO案件在品牌方、律所、法院、侵权类型及地域分布五大维度的趋势变化。跨境电商卖家必读，提前布局规避IP风险。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "2026趋势",
+        "TRO预警",
+        "律所格局",
+        "版权侵权",
+        "合规选品"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-03",
       "slug": "auto-202608030550",
       "title": "深度｜Schedule A 批量诉讼：一场针对跨境卖家的\"法律围猎\"如何运作？",
