@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-08-05",
+      "slug": "auto-202608050521",
+      "title": "商标 vs 版权 vs 外观专利：TRO案件中三大IP权利的生死差异",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-shield-halved",
+      "excerpt": "跨境电商卖家必读！一文讲透商标、版权、外观专利三种IP权利在TRO案件中的诉因差异、赔偿标准、抗辩空间与应对策略，助您在冻结令面前从容应对。",
+      "read_time": "14分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO科普",
+        "商标侵权",
+        "版权侵权",
+        "外观专利",
+        "跨境电商"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-04",
       "slug": "auto-202608040521",
       "title": "深度预警：2026年跨境电商IP维权趋势五大变化，卖家必读",
