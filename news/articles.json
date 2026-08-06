@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-08-06",
+      "slug": "auto-202608060523",
+      "title": "$200万法定赔偿上限如何计算？兰哈姆法下的卖家生死线",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-balance-scale",
+      "excerpt": "深度解读美国兰哈姆法下商标法定赔偿$200万上限的计算逻辑、影响因子与实际判决区间。TRO稻草人团队500+案件经验，助你精准评估TRO案件风险与应对策略。",
+      "read_time": "13分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "法定赔偿",
+        "兰哈姆法",
+        "TRO应对",
+        "和解策略"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-05",
       "slug": "auto-202608050521",
       "title": "商标 vs 版权 vs 外观专利：TRO案件中三大IP权利的生死差异",
