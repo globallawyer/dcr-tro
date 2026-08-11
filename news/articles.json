@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-08-11",
+      "slug": "深度干货-美国tro律师怎么选bar-admission联邦",
+      "title": "深度干货 | 美国TRO律师怎么选？Bar Admission、联邦法院准入与Pro Hac Vice全解析",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-user-tie",
+      "excerpt": "TRO案件涉及美国联邦法院程序，律师资质是成败第一道关。本文深度解析Bar Admission、Federal Court Admission与Pro Hac Vice的区别，并给出选择TRO律师的5个硬指标，帮助跨境卖家避开无效律师的坑。",
+      "read_time": "13分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO律师选择",
+        "BarAdmission",
+        "ProHacVice",
+        "联邦法院",
+        "跨境卖家"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-10",
       "slug": "auto-202608100402",
       "title": "深度干货｜跨境卖家必读：采购合规证据留存全攻略，关键时刻能救你",
