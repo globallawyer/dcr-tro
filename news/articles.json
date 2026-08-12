@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-08-12",
+      "slug": "auto-202608120412",
+      "title": "深度干货必读：PayPal资金冻结全流程详解，从冻结通知到资金划扣的每一步",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-book",
+      "excerpt": "TRO案件中PayPal资金冻结全流程详解：从冻结通知到资金划扣的完整时间线、法律依据（美国法典第15编§1116条等）、三种解冻条件对比，以及卖家应对策略。TRO稻草人500+案件经验深度解读。",
+      "read_time": "14分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "PayPal冻结",
+        "TRO全流程",
+        "资金解冻",
+        "跨境卖家",
+        "TRO应对"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-11",
       "slug": "深度干货-美国tro律师怎么选bar-admission联邦",
       "title": "深度干货 | 美国TRO律师怎么选？Bar Admission、联邦法院准入与Pro Hac Vice全解析",
