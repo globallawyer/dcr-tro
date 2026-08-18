@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-08-18",
+      "slug": "auto-202608180302",
+      "title": "深度预警：泡泡玛特海外维权升级，LABUBU/MOLLY成TRO新焦点",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-magnifying-glass",
+      "excerpt": "泡泡玛特旗下LABUBU、MOLLY、DIMOO等IP在海外维权力度显著升级，涉及多家律所与多起TRO案件。本文深度解析泡泡玛特维权策略、涉诉律所与卖家应对指南。",
+      "read_time": "12分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "POPMART维权",
+        "TRO预警",
+        "LABUBU",
+        "潮玩出海",
+        "知识产权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-17",
       "slug": "auto-202608170306",
       "title": "深度干货：TRO和解协议必须看的8个条款，避开致命陷阱",
