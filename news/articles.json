@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-08-23",
+      "slug": "auto-202608230309",
+      "title": "一纸诉状\"拉黑\"数百卖家：深度拆解Schedule A批量诉讼的法律本质与维权逻辑",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-gavel",
+      "excerpt": "深度解析Schedule A批量诉讼的法律依据、程序特点与策略逻辑，揭示其成为跨境电商维权主流工具的深层原因。TRO稻草人500+案件经验专业解读。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "ScheduleA",
+        "TRO",
+        "跨境维权",
+        "法律解读"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-22",
       "slug": "auto-202608220300",
       "title": "深度干货：PayPal 资金冻结全流程详解，卖家必读的 TRO 应对指南",
