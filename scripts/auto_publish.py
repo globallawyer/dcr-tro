@@ -28,6 +28,8 @@ from typing import Any
 
 import requests  # anthropic 仅在 LLM_PROVIDER=claude 时才 import
 
+from build_discovery import build_discovery_files
+
 # ==================== 配置 ====================
 REPO_ROOT = Path(__file__).resolve().parent.parent
 NEWS_DIR = REPO_ROOT / "news"
@@ -1121,6 +1123,8 @@ def main() -> int:
     print("[step 4] 重渲染首页 + 归档页...")
     update_homepage(articles)
     update_archive(articles)
+    if not DRY_RUN:
+        build_discovery_files(REPO_ROOT)
 
     print(f"[done] ✅ 新文章: {new_entry['title']}")
     print(f"       URL: https://trolawyer.site/news/{today}-{new_entry['slug']}.html")
