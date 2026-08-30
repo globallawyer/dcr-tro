@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-08-30",
+      "slug": "auto-202608300811",
+      "title": "深度干货：跨境卖家如何留存采购合规证据，TRO应诉不慌",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-file-contract",
+      "excerpt": "TRO冻结突袭，证据是唯一护身符。本文详解供应商合同、发票、授权文件、产品检测报告的留存策略，助你在和解谈判中掌握主动权。TRO稻草人团队500+案件经验深度总结。",
+      "read_time": "12分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "采购合规",
+        "证据留存",
+        "TRO应对",
+        "和解谈判"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-08-29",
       "slug": "auto-202608290854",
       "title": "深度解析：为什么Schedule A都在伊利诺伊北区法院立案？",
