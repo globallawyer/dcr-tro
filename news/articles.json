@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-09-02",
+      "slug": "auto-202609020701",
+      "title": "深度解析：Schedule A 批量诉讼为何成为跨境电商维权主流",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-gavel",
+      "excerpt": "深度解析Schedule A批量诉讼的法律本质，从程序规则、制度设计到战术优势，揭示其为何成为美国品牌方针对跨境电商维权的首选武器，并提供卖家应对策略。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "Schedule A",
+        "批量诉讼",
+        "TRO深度解读",
+        "跨境电商维权",
+        "法律程序"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-09-01",
       "slug": "auto-202609010738",
       "title": "深度干货：PayPal 资金冻结全流程详解——从冻结通知到解冻自救",
