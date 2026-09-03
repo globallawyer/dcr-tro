@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-09-03",
+      "slug": "auto-202609030705",
+      "title": "2026年跨境电商IP维权趋势观察：五大变化正在重塑TRO战场",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，深度解析2026年TRO案件在品牌类型、原告律所、管辖法院及地域分布上的显著变化。从GBC一家独大到多律所混战，从商标侵权到版权陷阱，跨境电商卖家必须看清的新战场。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "2026趋势",
+        "TRO预警",
+        "版权风险",
+        "律所格局",
+        "法院管辖"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-09-02",
       "slug": "auto-202609020701",
       "title": "深度解析：Schedule A 批量诉讼为何成为跨境电商维权主流",
