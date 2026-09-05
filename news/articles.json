@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-09-05",
+      "slug": "auto-202609050652",
+      "title": "深度干货：法定赔偿 $200 万上限到底怎么算出来的？卖家必读的兰哈姆法赔偿逻辑",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-balance-scale",
+      "excerpt": "深入解读美国兰哈姆法（Lanham Act）下商标法定赔偿的计算逻辑、关键影响因素，以及实际判例中的常见金额区间，帮助跨境电商卖家理解TRO风险与应对策略。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "兰哈姆法",
+        "法定赔偿",
+        "TRO应对",
+        "商标侵权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-09-04",
       "slug": "auto-202609040709",
       "title": "商标 vs 版权 vs 外观专利：TRO案件中三类IP权利的差异与卖家应对全指南",
