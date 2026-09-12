@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-09-12",
+      "slug": "auto-202609120704",
+      "title": "深度｜Schedule A 批量诉讼的法律本质：为什么它成了跨境电商维权的主流武器",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-gavel",
+      "excerpt": "Schedule A 批量诉讼为何成为跨境电商知识产权维权的主流机制？本文从法律依据、程序特点与实战逻辑三个层面深度拆解这一机制，解析原告如何用一份起诉状锁定数百名被告，以及卖家在收到 TRO 冻结令后应当如何应对。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "Schedule A",
+        "批量诉讼",
+        "TRO",
+        "跨境电商",
+        "知识产权维权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-09-11",
       "slug": "auto-202609110712",
       "title": "深度干货｜PayPal 资金冻结全流程详解：TRO 案件中你的钱到底被谁锁住了",
