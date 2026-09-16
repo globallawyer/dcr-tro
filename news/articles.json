@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-09-16",
+      "slug": "auto-202609160733",
+      "title": "TRO和解协议必读：8个关键条款逐条拆解，别在最后一步踩坑",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-handshake",
+      "excerpt": "TRO和解协议签字前必须逐条核对的8个条款：Full Release、No Admission、Confidentiality、Payment Terms、Dismissal、Governing Law、Non-Disparagement、Future Conduct。稻草人团队基于500+案件经验，拆解每个条款的谈判空间与常见陷阱，帮跨境卖家避开和解协议里的坑。",
+      "read_time": "10分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO和解协议",
+        "Full Release",
+        "No Admission",
+        "跨境电商TRO",
+        "条款审查"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-09-15",
       "slug": "auto-202609150733",
       "title": "深度｜法定赔偿 200 万美元上限是怎么算出来的？兰哈姆法商标赔偿计算全解析",
