@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-09-18",
+      "slug": "auto-202609180718",
+      "title": "深度｜为什么 Schedule A 案件几乎都在伊利诺伊北区法院立案？",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-building-columns",
+      "excerpt": "Schedule A 批量维权为何高度集中于美国伊利诺伊北区法院（N.D. Illinois）？本文从历史渊源、法律规则与实务操作三个层面拆解这一现象的成因，并结合稻草人团队 500+ 案件经验与 TROTracker 监控数据，说明它对跨境电商卖家应诉策略的实际影响。",
+      "read_time": "9分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "Schedule A",
+        "N.D. Illinois",
+        "TRO",
+        "跨境电商",
+        "临时禁令"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-09-17",
       "slug": "auto-202609170729",
       "title": "深度预警：POP MART 海外维权全面提速，LABUBU 卖家正在成为头号目标",
