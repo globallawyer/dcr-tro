@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-09-23",
+      "slug": "auto-202609230738",
+      "title": "2026跨境电商TRO维权趋势深度观察：品牌、律所、法院的三重变局",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，解析2026年跨境电商TRO案件的品牌集中度、律所打法、法院分布与卖家地域变化。品牌方维权从商标向专利、版权延伸，起诉节奏前置，卖家应如何调整合规策略？",
+      "read_time": "9分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO趋势",
+        "跨境电商维权",
+        "知识产权",
+        "TROTracker",
+        "行业预警"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-09-22",
       "slug": "auto-202609220736",
       "title": "深度｜Schedule A 批量诉讼的法律本质：为什么它成了跨境电商维权的主流武器",
