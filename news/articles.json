@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-10-02",
+      "slug": "auto-202610020818",
+      "title": "深度 | Schedule A 批量诉讼的法律本质：为什么它成了跨境电商维权的主流武器",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-gavel",
+      "excerpt": "Schedule A 不是一种诉讼类型，而是一种被告列名机制。本文从联邦民事诉讼规则出发，拆解 Schedule A 批量诉讼的法律依据、程序特点与效率逻辑，解释它为何成为跨境电商知识产权维权的主流路径，以及卖家收到 TRO 后应如何应对。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "Schedule A",
+        "TRO",
+        "跨境电商",
+        "知识产权",
+        "批量诉讼"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-10-01",
       "slug": "auto-202610010840",
       "title": "干货 | PayPal 资金冻结全流程详解：TRO 案件中你的钱是怎么被锁住的",
