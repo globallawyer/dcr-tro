@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-10-06",
+      "slug": "auto-202610060850",
+      "title": "深度干货｜TRO 和解协议必须看的 8 个条款：签错一行，账户可能白冻",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-handshake",
+      "excerpt": "收到 TRO 后，和解协议往往比冻结本身更危险。本文由中美双证律师逐条拆解 Full Release、No Admission、Confidentiality、Payment Terms 等 8 个关键条款，告诉你哪些措辞必须改、哪些条款绝不能签，帮跨境卖家在签字前避开常见陷阱。",
+      "read_time": "10分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO和解协议",
+        "FullRelease",
+        "跨境电商合规",
+        "NoAdmission",
+        "条款审查"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-10-05",
       "slug": "auto-202610050847",
       "title": "深度｜商标法定赔偿200万美元上限是怎么算出来的？拆解兰哈姆法的计算逻辑",
