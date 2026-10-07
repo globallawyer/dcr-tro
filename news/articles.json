@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-10-07",
+      "slug": "auto-202610070828",
+      "title": "深度预警｜POP MART 出海维权全面提速，LABUBU 卖家正在被批量盯上",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-magnifying-glass",
+      "excerpt": "泡泡玛特旗下 LABUBU、MOLLY、DIMOO 等 IP 海外维权力度持续升级，从商标到版权、从平台投诉到联邦诉讼多线并行。本文梳理其维权路径、涉及律所与典型案件特征，并给出跨境卖家的自查与应对建议。",
+      "read_time": "10分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "POPMART维权",
+        "LABUBU",
+        "TRO预警",
+        "跨境电商合规",
+        "知识产权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-10-06",
       "slug": "auto-202610060850",
       "title": "深度干货｜TRO 和解协议必须看的 8 个条款：签错一行，账户可能白冻",
