@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-10-19",
+      "slug": "auto-202610190736",
+      "title": "干货必读｜跨境卖家如何留存采购合规证据：从合同到检测报告的完整清单",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-file-contract",
+      "excerpt": "TRO 冻结后最常见的败因不是",
+      "read_time": "10分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO",
+        "采购合规",
+        "证据留存",
+        "跨境电商"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-10-18",
       "slug": "auto-202610180708",
       "title": "深度 | 为什么 Schedule A 案件都涌向伊利诺伊北区法院？卖家必读的法院逻辑",
