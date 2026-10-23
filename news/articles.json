@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-10-23",
+      "slug": "auto-202610230718",
+      "title": "深度｜2026跨境电商IP维权趋势观察：品牌、律所、法院正在同时换挡",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-exclamation-triangle",
+      "excerpt": "基于TROTracker监控数据，稻草人研究部梳理2026年跨境电商TRO案件的品牌结构、原告律所格局、立案法院分布与卖家被诉地域变化，并给出可执行的应对建议。趋势不是新闻，而是提前半年到来的预警。",
+      "read_time": "12分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO趋势",
+        "跨境电商知识产权",
+        "2026预警",
+        "TROTracker",
+        "品牌维权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-10-22",
       "slug": "auto-202610220724",
       "title": "深度｜Schedule A 批量诉讼的法律本质：一场被\"设计\"出来的维权流水线",
