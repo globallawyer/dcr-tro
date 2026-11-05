@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-11-05",
+      "slug": "auto-202611050917",
+      "title": "TRO 和解协议必须看的 8 个条款：签字前少看一条，可能多赔一笔",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-handshake",
+      "excerpt": "收到 TRO 后谈成和解，签字前请先逐条核对协议。本文拆解 TRO 和解协议中最关键的 8 个条款——Full Release、No Admission、Confidentiality、付款与解冻安排、撤诉义务等，说明每个条款的常见坑与修改方向，帮跨境卖家在签字前守住账户与后续经营安全。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO和解协议",
+        "Full Release",
+        "No Admission",
+        "TRO解冻",
+        "跨境电商合规"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-11-04",
       "slug": "auto-202611040854",
       "title": "深度｜兰哈姆法法定赔偿上限 $200 万，到底是怎么算出来的？",
