@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-11-06",
+      "slug": "深度labubu全球爆火背后pop-mart-维权策略观察",
+      "title": "深度｜LABUBU全球爆火背后：POP MART 维权策略观察",
+      "category": "warn",
+      "category_label": "行业预警",
+      "category_icon": "fa-magnifying-glass",
+      "excerpt": "LABUBU、MOLLY、DIMOO 全球走红，POP MART 的海外维权节奏明显加快。本文从维权主体、代理律所、案件类型与执法路径四个维度，拆解泡泡玛特的 IP 围猎逻辑，并给出跨境卖家的自查与应对建议。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "POPMART",
+        "LABUBU",
+        "TRO",
+        "跨境电商",
+        "版权侵权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-11-05",
       "slug": "auto-202611050917",
       "title": "TRO 和解协议必须看的 8 个条款：签字前少看一条，可能多赔一笔",
