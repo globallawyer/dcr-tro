@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-11-10",
+      "slug": "auto-202611100934",
+      "title": "深度干货｜PayPal 资金冻结全流程详解：TRO 案件下，你的钱到底被谁锁住了？",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-book",
+      "excerpt": "从原告申请 TRO、法院签发冻结令，到 PayPal 收到指令执行限制、卖家账户被划扣，本文拆解 PayPal 在 TRO 案件中冻结资金的完整链路与法律依据，讲清解冻的三个核心条件与卖家可执行的应对顺序，附稻草人 500+ 案件实务观察。",
+      "read_time": "13分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "PayPal冻结",
+        "TRO",
+        "资金解冻",
+        "跨境电商合规",
+        "PreliminaryInjunction"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-11-09",
       "slug": "干货必读美国联邦法院律师怎么选bar-admissionfe",
       "title": "干货必读｜美国联邦法院律师怎么选？Bar Admission、Federal Court Admission 与 Pro Hac Vice 全解析",
