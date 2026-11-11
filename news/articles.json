@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-11-11",
+      "slug": "auto-202611110909",
+      "title": "深度｜Schedule A 批量诉讼的法律本质：为什么它成了跨境电商维权的主流武器",
+      "category": "analysis",
+      "category_label": "深度分析",
+      "category_icon": "fa-gavel",
+      "excerpt": "从法律依据、程序特点到商业逻辑，深度拆解 Schedule A 批量诉讼为何成为跨境电商维权主流。稻草人团队结合 500+ 案件经验与 TROTracker 监控数据，讲清匿名被告、单案合并、临时禁令与和解博弈的底层机制，帮卖家看懂这类诉讼的真实打法与应对要点。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "Schedule A",
+        "TRO",
+        "跨境电商",
+        "批量诉讼",
+        "临时禁令"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-11-10",
       "slug": "auto-202611100934",
       "title": "深度干货｜PayPal 资金冻结全流程详解：TRO 案件下，你的钱到底被谁锁住了？",
