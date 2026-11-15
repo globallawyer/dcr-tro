@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-11-15",
+      "slug": "auto-202611150905",
+      "title": "TRO 和解协议必须看的 8 个条款：签错一条，钱可能白付",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-handshake",
+      "excerpt": "TRO 和解协议不是签个字就完事。Full Release、No Admission、Confidentiality、Release Scope、Payment Terms 等 8 个关键条款，决定你付完钱之后能不能真正解冻、会不会被二次起诉。稻草人团队基于 500+ 案件经验，逐条拆解和解协议里的坑与谈判空间。",
+      "read_time": "10分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO和解协议",
+        "Full Release",
+        "跨境电商合规",
+        "和解条款审阅"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-11-14",
       "slug": "auto-202611140850",
       "title": "深度｜兰哈姆法法定赔偿 $200 万上限，到底是怎么算出来的？",
