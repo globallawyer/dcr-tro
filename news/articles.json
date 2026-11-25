@@ -21,6 +21,26 @@
   },
   "articles": [
     {
+      "date": "2026-11-25",
+      "slug": "auto-202611251104",
+      "title": "TRO和解协议必读：8个条款逐条拆解，签字前先看懂这些坑",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-handshake",
+      "excerpt": "TRO和解协议不是签个字就完事。Full Release、No Admission、Confidentiality、Release Scope、Payment Terms 等8个关键条款，直接决定你能否彻底脱身、会不会二次被诉。本文由中美双证律师逐条拆解，帮跨境卖家在签字前看懂每一句英文背后的风险。",
+      "read_time": "12分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO和解协议",
+        "Full Release",
+        "跨境电商TRO",
+        "协议审阅"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-11-24",
       "slug": "auto-202611241217",
       "title": "深度｜法定赔偿 200 万美元上限是怎么算出来的？兰哈姆法商标赔偿逻辑全拆解",
