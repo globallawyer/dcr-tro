@@ -21,6 +21,27 @@
   },
   "articles": [
     {
+      "date": "2026-11-28",
+      "slug": "auto-202611281005",
+      "title": "跨境卖家必读：TRO来袭前，如何留存采购合规证据",
+      "category": "guide",
+      "category_label": "科普教程",
+      "category_icon": "fa-file-contract",
+      "excerpt": "TRO冻结往往发生在证据链最薄弱的时刻。本文从供应商合同、商业发票、品牌授权文件到产品检测报告，系统拆解跨境卖家采购合规证据的留存策略，附证据清单与常见误区，帮助卖家在诉讼与和解谈判中掌握主动。",
+      "read_time": "11分钟",
+      "views": 0,
+      "author": "张兆新",
+      "hot": false,
+      "tags": [
+        "TRO应对",
+        "采购合规",
+        "证据留存",
+        "跨境电商",
+        "品牌授权"
+      ],
+      "source": "auto"
+    },
+    {
       "date": "2026-11-27",
       "slug": "auto-202611271043",
       "title": "深度｜为什么 Schedule A 案件几乎都涌向伊利诺伊北区法院？",
